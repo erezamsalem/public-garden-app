@@ -2,30 +2,24 @@
 
 name: Build and Deploy to Minikube
 
-# This action triggers on every push to the 'main' branch
 on:
   push:
     branches: [ "main" ]
 
 jobs:
   build-and-deploy:
-    # This job MUST run on your self-hosted runner to access Minikube
     runs-on: self-hosted
 
     steps:
-      # 1. Check out the repository code
       - name: Check out code
         uses: actions/checkout@v4
 
-      # 2. Log in to Docker Hub using secrets
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # 3. Build and push the Docker image
-      # We tag the image with the unique commit SHA for versioning
       - name: Build and push Docker image
         id: build-image
         uses: docker/build-push-action@v5
@@ -34,10 +28,10 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/public-garden-app:${{ github.sha }}
 
-      # 4. Deploy to Minikube
       - name: Deploy to Minikube
         run: |
-          echo "Deploying image ${{ secrets.DOCKERHUB_USERNAME }}/public-garden-app:${{ github.sha }}"
-          # This command is the ONLY one needed. It tells Kubernetes to update the
-          # deployment with the new image tag, which triggers a safe, rolling update.
-          kubectl set image deployment/public-garden-deployment public-garden-container=${{ secrets.DOCKERHUB_USERNAME }}/public-garden-app:${{ github.sha }} -n public-garden-app --record
+          echo "Deploying to Minikube..."
+          # This command now explicitly tells kubectl where to find the configuration
+          # file needed to connect to your Minikube cluster.
+          kubectl set image deployment/public-garden-deployment public-garden-container=${{ secrets.DOCKERHUB_USERNAME }}/public-garden-app:${{ github.sha }} -n public-garden-app --kubeconfig="C:\Users\ereza\.kube\config"
+
