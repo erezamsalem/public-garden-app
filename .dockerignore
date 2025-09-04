@@ -1,0 +1,17 @@
+# Exclude dependencies, as they are installed inside the container
+node_modules
+
+# Exclude environment variables file, it should be passed at runtime
+.env
+
+# Exclude local development files and backups
+.git
+.gitignore
+Dockerfile
+database-backup
+Notes.txt
+2.jpg
+public-garden.jpg
+
+# Exclude logs
+npm-debug.log

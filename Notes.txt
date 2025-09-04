@@ -1,0 +1,178 @@
+
+
+AIzaSyA15EHJgYRBlBeSCT160yNFtI1V606zqvU
+
+
+tCqtWhRymtBSF6oW
+
+
+mongodb+srv://erezamsalem:tCqtWhRymtBSF6oW@public-garden-app.qejnvrb.mongodb.net/?retryWrites=true&w=majority&appName=Public-Garden-App
+
+
+Public-Garden-Locator
+
+0880f6f5-e5ce-5be3-6665-cd0785a6d39f:96d67088-ea5b-40cd-8ed5-e1dd6f2bfda3_2019-05-31
+
+
+MEKS-XGVQ-BG7-PGB
+
+
+Public-Garden-Locator
+
+
+https://public-garden-locator.azurewebsites.net/
+
+
+221  🖊️
+
+az webapp log tail --name Public-Garden-Locator --resource-group Public-Garden-Locator
+
+
+mongodb+srv://erezamsalem:YrejiwwcqRG7yaO2@test-db-garden.eom1n85.mongodb.net/?retryWrites=true&w=majority&appName=Test-db-garden
+
+
+
+YrejiwwcqRG7yaO2
+
+GOOGLE_MAPS_API_KEY
+
+erezamsalem@hotmail   
+
+erez1234
+
+ secret code - 202507
+
+ garden's custom name to be added directly in front of the existing address line,
+
+
+docker build -t public-garden-app .
+
+docker run -d -p 3000:3000 --env-file ./.env --name public-garden-container public-garden-app
+
+ docker logs -f public-garden-container
+
+ docker start public-garden-container
+
+
+
+ PS C:\MICROSOFT\PUBLIC-GARDEN-APP\Public Garden App-Azure--Test Development\Public Garden App-Azure-GEMINI API - admin page-next-docker> docker build -t public-garden-app .
+[+] Building 33.6s (11/11) FINISHED                                                                docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.2s
+ => => transferring dockerfile: 876B                                                                               0.1s
+ => [internal] load metadata for docker.io/library/node:20-alpine                                                  3.7s
+ => [auth] library/node:pull token for registry-1.docker.io                                                        0.0s
+ => [internal] load .dockerignore                                                                                  0.1s
+ => => transferring context: 366B                                                                                  0.0s
+ => [1/5] FROM docker.io/library/node:20-alpine@sha256:df02558528d3d3d0d621f112e232611aecfee7cbc654f6b375765f72b  17.6s
+ => => resolve docker.io/library/node:20-alpine@sha256:df02558528d3d3d0d621f112e232611aecfee7cbc654f6b375765f72bb  0.1s
+ => => sha256:8c59d92d6fc9f01af4aaa86824be72b74bd4d940c4c46aa95d9710bfa46c975e 42.99MB / 42.99MB                  14.2s
+ => => sha256:a9e48ad1219d4d11c6456a8db0fd5c11af46242d52edf84e17ab84a7bfd93809 445B / 445B                         0.8s
+ => => sha256:54225bd601967a0aa669ec9be621c24d8eeac874b698d55874018070898685c2 1.26MB / 1.26MB                     1.6s
+ => => extracting sha256:8c59d92d6fc9f01af4aaa86824be72b74bd4d940c4c46aa95d9710bfa46c975e                          2.9s
+ => => extracting sha256:54225bd601967a0aa669ec9be621c24d8eeac874b698d55874018070898685c2                          0.1s
+ => => extracting sha256:a9e48ad1219d4d11c6456a8db0fd5c11af46242d52edf84e17ab84a7bfd93809                          0.0s
+ => [internal] load build context                                                                                  0.4s
+ => => transferring context: 552.52kB                                                                              0.3s
+ => [2/5] WORKDIR /usr/src/app                                                                                     0.3s
+ => [3/5] COPY package*.json ./                                                                                    0.1s
+ => [4/5] RUN npm ci --only=production                                                                             7.0s
+ => [5/5] COPY . .                                                                                                 0.2s
+ => exporting to image                                                                                             4.0s
+ => => exporting layers                                                                                            2.1s
+ => => exporting manifest sha256:95504ba45ce9827f41b1302f912138553f3fb073c50cf8d937fb741b56396780                  0.0s
+ => => exporting config sha256:3010bf7a43b7c38dd968444d36e13b4c55dccc34a49982ee8093ecef04929b0a                    0.0s
+ => => exporting attestation manifest sha256:4580379bbd7ac363f9c264932ae5bfd139e0e4848326734420bd47628bf48f8e      0.1s
+ => => exporting manifest list sha256:a943f9c869b263adad76f66c143146ae95e68eeb9b521c0402101df9b63ad318             0.0s
+ => => naming to docker.io/library/public-garden-app:latest                                                        0.0s
+ => => unpacking to docker.io/library/public-garden-app:latest                                                     1.5s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/2vyykhym1nbgl3efdvcbag1oa
+PS C:\MICROSOFT\PUBLIC-GARDEN-APP\Public Garden App-Azure--Test Development\Public Garden App-Azure-GEMINI API - admin page-next-docker> docker run -d -p 3000:3000 --env-file ./.env --name public-garden-container public-garden-app
+4bc8b3d6951005b8888bffa122f0c9a618823d0517b8d6b3a287e94e35d1d693
+PS C:\MICROSOFT\PUBLIC-GARDEN-APP\Public Garden App-Azure--Test Development\Public Garden App-Azure-GEMINI API - admin page-next-docker> docker logs -f public-garden-container
+✅Server is running on http://localhost:3000✅
+✅Successfully connected to MongoDB Atlas!✅
+[2025-09-02T10:10:38.790Z] GET /api/config - Request for API key received.
+[2025-09-02T10:10:38.856Z] GET /api/gardens - Fetching all gardens.
+
+
+
+
+PS C:\MICROSOFT\PUBLIC-GARDEN-APP\Public Garden App-Azure--Test Development\Public Garden App-Azure-GEMINI API - admin page-next-docker> docker login
+Authenticating with existing credentials... [Username: erezamsalem]
+
+i Info → To login with a different account, run 'docker logout' followed by 'docker login'
+
+
+Login Succeeded
+PS C:\MICROSOFT\PUBLIC-GARDEN-APP\Public Garden App-Azure--Test Development\Public Garden App-Azure-GEMINI API - admin page-next-docker> docker tag public-garden-app:latest erezamsalem/public-garden-app:1.0
+PS C:\MICROSOFT\PUBLIC-GARDEN-APP\Public Garden App-Azure--Test Development\Public Garden App-Azure-GEMINI API - admin page-next-docker> docker push erezamsalem/public-garden-app:1.0
+The push refers to repository [docker.io/erezamsalem/public-garden-app]
+cb52adc929aa: Pushed
+11414e32dc3d: Pushed
+54225bd60196: Pushed
+3c22f67b4569: Pushed
+a9e48ad1219d: Pushed
+b275e21dec3e: Pushed
+8c59d92d6fc9: Pushed
+9824c27679d3: Mounted from docker/welcome-to-docker
+5edad7e91503: Pushed
+1.0: digest: sha256:a943f9c869b263adad76f66c143146ae95e68eeb9b521c0402101df9b63ad318 size: 856
+
+
+kubectl create namespace public-garden-app
+
+kubectl create secret generic public-garden-secrets --from-env-file=.env -n public-garden-app
+
+kubectl apply -f deployment.yaml -n public-garden-app
+
+minikube service public-garden-service -n public-garden-app
+
+PS C:\MICROSOFT\PUBLIC-GARDEN-APP\Public Garden App-Azure--Test Development\Public Garden App-Azure-GEMINI API - admin page-next-docker> kubectl create namespace public-garden-app
+namespace/public-garden-app created
+PS C:\MICROSOFT\PUBLIC-GARDEN-APP\Public Garden App-Azure--Test Development\Public Garden App-Azure-GEMINI API - admin page-next-docker> kubectl create secret generic public-garden-secrets --from-env-file=.env -n public-garden-app
+secret/public-garden-secrets created
+PS C:\MICROSOFT\PUBLIC-GARDEN-APP\Public Garden App-Azure--Test Development\Public Garden App-Azure-GEMINI API - admin page-next-docker> kubectl apply -f deployment.yaml -n public-garden-app
+deployment.apps/public-garden-deployment created
+service/public-garden-service created
+PS C:\MICROSOFT\PUBLIC-GARDEN-APP\Public Garden App-Azure--Test Development\Public Garden App-Azure-GEMINI API - admin page-next-docker>
+
+
+PS C:\MICROSOFT\PUBLIC-GARDEN-APP\Public Garden App-Azure--Test Development\Public Garden App-Azure-GEMINI API - admin page-next-docker> minikube service public-garden-service -n public-garden-app
+|-------------------|-----------------------|-------------|---------------------------|
+|     NAMESPACE     |         NAME          | TARGET PORT |            URL            |
+|-------------------|-----------------------|-------------|---------------------------|
+| public-garden-app | public-garden-service |          80 | http://192.168.49.2:32505 |
+|-------------------|-----------------------|-------------|---------------------------|
+🏃  Starting tunnel for service public-garden-service.
+|-------------------|-----------------------|-------------|------------------------|
+|     NAMESPACE     |         NAME          | TARGET PORT |          URL           |
+|-------------------|-----------------------|-------------|------------------------|
+| public-garden-app | public-garden-service |             | http://127.0.0.1:65062 |
+|-------------------|-----------------------|-------------|------------------------|
+🎉  Opening service public-garden-app/public-garden-service in default browser...
+❗  Because you are using a Docker driver on windows, the terminal needs to be open to run it.
+
+
+PS C:\Users\ereza> kubectl get secret public-garden-secrets -n public-garden-app -o yaml
+apiVersion: v1
+data:
+  GEMINI_API_KEY: QUl6YVN5Qy1FT0FhZ2R2VjVwODQ5UjJkM2Z2YXZGam91Nk9IWk1v
+  GOOGLE_MAPS_API_KEY: QUl6YVN5QTE1RUhKZ1lSQmxCZVNDVDE2MHlORnRJMVY2MDZ6cXZV
+  MONGO_URI: bW9uZ29kYitzcnY6Ly9lcmV6YW1zYWxlbTpZcmVqaXd3Y3FSRzd5YU8yQHRlc3QtZGItZ2FyZGVuLmVvbTFuODUubW9uZ29kYi5uZXQvP3JldHJ5V3JpdGVzPXRydWUmdz1tYWpvcml0eSZhcHBOYW1lPVRlc3QtZGItZ2FyZGVu
+  PORT: MzAwMA==
+kind: Secret
+metadata:
+  creationTimestamp: "2025-09-02T10:41:22Z"
+  name: public-garden-secrets
+  namespace: public-garden-app
+  resourceVersion: "36646"
+  uid: 0e804fde-e53d-4e91-93b7-7f89eac78c16
+type: Opaque
+PS C:\Users\ereza>
+
+PS C:\Users\ereza> kubectl rollout restart deployment/public-garden-deployment -n public-garden-app
+deployment.apps/public-garden-deployment restarted
+PS C:\Users\ereza>
+
+ 

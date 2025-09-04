@@ -1,0 +1,1268 @@
+[{
+  "_id": {
+    "$oid": "685726444eec0b6556aa5326"
+  },
+  "latitude": 32.08031103044994,
+  "longitude": 34.89009976387024,
+  "city": "Petah Tikva",
+  "address": "Shmu'el Salant St 53, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "kidsCount": 7,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T05:54:45.866Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": false,
+  "hasSpaceForDogs": false,
+  "hasSpringHorse": true,
+  "customName": "גן יונתן שרעבי",
+  "hasPingPongTable": false,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "685726654eec0b6556aa5329"
+  },
+  "latitude": 32.081001912744036,
+  "longitude": 34.88335490204918,
+  "city": "Petah Tikva",
+  "address": "Haim Cohen St 4, Petah Tikva, 4955325, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "kidsCount": 24,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T12:09:53.906Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": true,
+  "hasSpaceForDogs": true,
+  "hasSpringHorse": true,
+  "customName": "גן הנשיא",
+  "hasPingPongTable": true,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "685726b84eec0b6556aa532e"
+  },
+  "latitude": 32.17033620634168,
+  "longitude": 34.92209851741791,
+  "city": "Kfar Saba",
+  "address": "Mish'ol Ahava 24, Kfar Saba, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "kidsCount": 55,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T05:53:26.161Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": false,
+  "hasSpaceForDogs": false,
+  "hasSpringHorse": true
+},
+{
+  "_id": {
+    "$oid": "6857858b84134393e8c3f0f2"
+  },
+  "latitude": 32.08271546010623,
+  "longitude": 34.8863106965473,
+  "city": "Petah Tikva",
+  "address": "Shapira St 21, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "kidsCount": 15,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-18T05:45:24.149Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": true,
+  "hasSpaceForDogs": false,
+  "hasSpringHorse": true,
+  "customName": "גן ע\"ש תמר זהבי",
+  "hasPingPongTable": false,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "685bdc73e09f6f70285926c4"
+  },
+  "latitude": 32.166073,
+  "longitude": 34.899651,
+  "city": "Hod Hasharon",
+  "address": "Golda Me'ir St 6 Hod Hasharon, Israel",
+  "hasWaterTap": true,
+  "hasSlide": false,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "kidsCount": 7,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T05:53:46.782Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": false,
+  "hasSpaceForDogs": false
+},
+{
+  "_id": {
+    "$oid": "685bde23e09f6f70285926d2"
+  },
+  "latitude": 31.7882368,
+  "longitude": 34.6324992,
+  "city": "Ashdod",
+  "address": "Nakhal Lakhish St 19, Ashdod, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "kidsCount": 55,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:12:24.567Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685bde43e09f6f70285926d6"
+  },
+  "latitude": 31.71972907088203,
+  "longitude": 35.22484501013744,
+  "city": "Jerusalem",
+  "address": "Ha-Rav Khisdai Crescas St 5, Jerusalem",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "kidsCount": 26,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:12:31.138Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685ce2af54ab63c664d72445"
+  },
+  "latitude": 32.06669715636552,
+  "longitude": 34.796367107938266,
+  "city": "Tel Aviv-Jaffa",
+  "address": "שדרות ההשכלה 11, Tel Aviv-Jaffa, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "kidsCount": 57,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:12:13.862Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": true,
+  "hasSpaceForDogs": true,
+  "hasSpringHorse": true,
+  "customName": "",
+  "hasPingPongTable": true,
+  "hasPublicBooksShelf": true
+},
+{
+  "_id": {
+    "$oid": "685ea3f7ebbea530254da311"
+  },
+  "latitude": 32.172232741005814,
+  "longitude": 34.92278372644127,
+  "city": "Kefar Sava",
+  "address": "Weizmann St 200, Kefar Sava, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "kidsCount": 55,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T14:39:27.005Z"
+  },
+  "__v": 0,
+  "hasBasketballField": true,
+  "hasFootballField": true,
+  "hasPublicGym": true,
+  "hasSpaceForDogs": true,
+  "hasSpringHorse": true,
+  "customName": " פארק כפר סבא ע\"ש יצחק ולד",
+  "hasPingPongTable": true,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "685ea5e8b0fa9840115be57c"
+  },
+  "latitude": 32.174824272463106,
+  "longitude": 34.923895576274866,
+  "city": "Kefar Sava",
+  "address": "Har Tavor St 42, Kefar Sava, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "kidsCount": 55,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T05:53:38.273Z"
+  },
+  "__v": 0,
+  "hasBasketballField": true,
+  "hasFootballField": true,
+  "hasPublicGym": true,
+  "hasSpaceForDogs": true,
+  "hasSpringHorse": true,
+  "customName": "",
+  "hasPingPongTable": true,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "68611eee804a4bcceb820602"
+  },
+  "latitude": 32.1130268265944,
+  "longitude": 34.83761114968786,
+  "city": "Tel Aviv-Jaffa",
+  "address": "גן מורד בית קמחי, Biriya St 3, Tel Aviv-Jaffa, Israel",
+  "hasWaterTap": false,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "kidsCount": 5,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T05:54:39.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6863fac0f01b8a79182ae81f"
+  },
+  "latitude": 32.08466793737308,
+  "longitude": 34.89428018588799,
+  "city": "Petah Tikva",
+  "address": " Rachel HaMeshoreret St 21, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "kidsCount": 5,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-10T05:13:57.437Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": false,
+  "hasSpaceForDogs": true,
+  "hasSpringHorse": false,
+  "customName": "גן מנחם הלר",
+  "hasPingPongTable": false,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "68651682c79dc032d77f3078"
+  },
+  "latitude": 32.0722202,
+  "longitude": 34.7869181,
+  "city": "Tel Aviv-Yafo",
+  "address": "Aluf Albert Mendler St 10, Tel Aviv-Yafo, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "kidsCount": 26,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:12:19.754Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": false,
+  "hasSpaceForDogs": false,
+  "hasSpringHorse": false
+},
+{
+  "_id": {
+    "$oid": "6866bcf711614b980039b9f5"
+  },
+  "latitude": 32.089567806467485,
+  "longitude": 34.8774763941492,
+  "city": "Petah Tikva",
+  "address": "Yitskhak Sadeh St 4, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "kidsCount": 6,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-20T05:08:26.746Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": false,
+  "hasSpaceForDogs": false,
+  "hasSpringHorse": true,
+  "customName": "גן ממה - ע\"ש פרידה פרידמן",
+  "hasPingPongTable": false,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "686b3ea3ccd9617309a23400"
+  },
+  "latitude": 32.07770456734301,
+  "longitude": 34.89220376583757,
+  "city": "Petah Tikva",
+  "address": "HaRav Maimon St 14, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "kidsCount": 24,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T05:54:57.560Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": true,
+  "hasSpaceForDogs": false,
+  "hasSpringHorse": true,
+  "customName": "גן התשעה",
+  "hasPingPongTable": true,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "686de9ba4f3154a787ed171f"
+  },
+  "latitude": 32.065783112031966,
+  "longitude": 34.79827165603638,
+  "city": "Tel Aviv-Yafo",
+  "address": "Bitsaron Garden, Bitsaron St 8, Tel Aviv-Yafo, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "kidsCount": 17,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:12:07.182Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": true,
+  "hasSpaceForDogs": false,
+  "hasSpringHorse": true
+},
+{
+  "_id": {
+    "$oid": "68749bce3fd37915993f5f7f"
+  },
+  "latitude": 32.080958069853644,
+  "longitude": 34.80329395639025,
+  "city": "Ramat Gan",
+  "address": " The First 14, Ramat Gan, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "kidsCount": 15,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:11:37.502Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": false,
+  "hasSpaceForDogs": true,
+  "hasSpringHorse": true,
+  "customName": "גן דוד פרנקפורטר",
+  "hasPingPongTable": true,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "6874d54647047c4053a59e53"
+  },
+  "latitude": 32.08051102322998,
+  "longitude": 34.803078174591064,
+  "city": "Ramat Gan",
+  "address": "Dov Friedman St 24, Ramat Gan, Israel",
+  "hasWaterTap": true,
+  "hasSlide": false,
+  "hasCarrousel": false,
+  "hasSwings": false,
+  "kidsCount": 7,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:11:44.204Z"
+  },
+  "__v": 0,
+  "hasBasketballField": true,
+  "hasFootballField": true,
+  "hasPublicGym": true,
+  "hasSpaceForDogs": false,
+  "hasSpringHorse": false,
+  "customName": "מתחם כושר ע\"ש אייל עזורי"
+},
+{
+  "_id": {
+    "$oid": "6876026b9f3ef86c63621e98"
+  },
+  "latitude": 32.078959550223104,
+  "longitude": 34.798851046536356,
+  "city": "Tel Aviv-Yafo",
+  "address": "Arvei Nahal St 2, Tel Aviv-Yafo, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "kidsCount": 9,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:12:00.381Z"
+  },
+  "__v": 0,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasPublicGym": false,
+  "hasSpaceForDogs": false,
+  "hasSpringHorse": true
+},
+{
+  "_id": {
+    "$oid": "6880d2e0bf6f3346d1c7a7f0"
+  },
+  "latitude": 32.0898908,
+  "longitude": 34.8104266,
+  "city": "Ramat Gan",
+  "address": "Abba Hillel Road/Rokach, Ramat Gan, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": true,
+  "kidsCount": 9,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:11:30.176Z"
+  },
+  "__v": 0,
+  "hasSpringHorse": true,
+  "customName": "גן עזרא קורין"
+},
+{
+  "_id": {
+    "$oid": "6880f20cbf6f3346d1c7a81f"
+  },
+  "latitude": 32.07414839137975,
+  "longitude": 34.89063002896831,
+  "city": "Petah Tikva",
+  "address": "Assaf Simhoni St 2, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 6,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-11T14:46:32.185Z"
+  },
+  "__v": 0,
+  "hasSpringHorse": true,
+  "customName": "גן משחקים ע\"ש מזל עמרני",
+  "hasPingPongTable": false,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "688206a607b710efc6e39c88"
+  },
+  "latitude": 32.0805163,
+  "longitude": 34.8021184,
+  "city": "Ramat Gan",
+  "address": "Dov Friedman St 16, Ramat Gan, Israel",
+  "hasWaterTap": true,
+  "hasSlide": false,
+  "hasCarrousel": false,
+  "hasSwings": false,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 4,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:11:49.950Z"
+  },
+  "__v": 0,
+  "customName": "גן אלרם",
+  "hasSpringHorse": false
+},
+{
+  "_id": {
+    "$oid": "6885dc576423da09e07c2458"
+  },
+  "latitude": 32.109980358757575,
+  "longitude": 34.82969339699665,
+  "city": "Tel Aviv-Yafo",
+  "address": "Yisra'el Ashkenazi St 26, Tel Aviv-Yafo, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": true,
+  "kidsCount": 9,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:11:01.137Z"
+  },
+  "__v": 0,
+  "hasSpringHorse": true,
+  "customName": "",
+  "hasPingPongTable": true,
+  "hasPublicBooksShelf": true
+},
+{
+  "_id": {
+    "$oid": "6885de366423da09e07c245d"
+  },
+  "latitude": 32.109247532532876,
+  "longitude": 34.8305324691939,
+  "city": "Tel Aviv-Yafo",
+  "address": "Mishmar ha-Yarden St 33, Tel Aviv-Yafo, Israel",
+  "hasWaterTap": true,
+  "hasSlide": false,
+  "hasCarrousel": false,
+  "hasSwings": false,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 3,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:10:51.618Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885dfd56423da09e07c2466"
+  },
+  "latitude": 32.108462001361566,
+  "longitude": 34.83448014127029,
+  "city": "Tel Aviv-Yafo",
+  "address": "HaGolan St 60, Tel Aviv-Yafo, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 6,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:10:37.223Z"
+  },
+  "__v": 0,
+  "hasSpringHorse": true
+},
+{
+  "_id": {
+    "$oid": "6885f5e06423da09e07c249b"
+  },
+  "latitude": 32.11524162172254,
+  "longitude": 34.83921718690388,
+  "city": "Tel Aviv-Yafo",
+  "address": "Dvora Hanevia St , Tel Aviv-Yafo, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": true,
+  "kidsCount": 9,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T05:54:25.454Z"
+  },
+  "__v": 0,
+  "hasSpringHorse": true
+},
+{
+  "_id": {
+    "$oid": "6885fd106423da09e07c24c5"
+  },
+  "latitude": 32.09350961526929,
+  "longitude": 34.81412351131439,
+  "city": "Ramat Gan",
+  "address": " Sderot HaShoshanim 20, Ramat Gan, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 19,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-26T11:03:08.267Z"
+  },
+  "__v": 0,
+  "hasSpringHorse": true,
+  "customName": "גן צלינה",
+  "hasPingPongTable": false,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "6885ff3d6423da09e07c24d2"
+  },
+  "latitude": 32.09515924582111,
+  "longitude": 34.81183099979561,
+  "city": "Ramat Gan",
+  "address": "Rokach St 98, Ramat Gan, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 7,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-26T10:57:03.237Z"
+  },
+  "__v": 0,
+  "hasSpringHorse": true,
+  "customName": "גן תל אביב",
+  "hasPingPongTable": false,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "6892254cfebccecaed6750ec"
+  },
+  "latitude": 32.08435950229941,
+  "longitude": 34.87351937287579,
+  "customName": "גן יונתן ע\"ש יוני נתניהו",
+  "city": "Petah Tikva",
+  "address": "Haim Arlozorov St 33, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicGym": true,
+  "hasBasketballField": true,
+  "hasFootballField": true,
+  "hasSpaceForDogs": false,
+  "kidsCount": 85,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T05:55:05.729Z"
+  },
+  "__v": 0,
+  "hasPingPongTable": true,
+  "hasPublicBooksShelf": false
+},
+{
+  "_id": {
+    "$oid": "68922c68febccecaed675105"
+  },
+  "latitude": 32.0829358282247,
+  "longitude": 34.87403187621348,
+  "customName": "גינת כושר לגיל השלישי",
+  "city": "Petah Tikva",
+  "address": "Binyamin Yahalom St 34, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": false,
+  "hasCarrousel": false,
+  "hasSwings": false,
+  "hasSpringHorse": false,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 10,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T05:55:12.118Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68933315e9b9021de0103484"
+  },
+  "latitude": 32.17896876563778,
+  "longitude": 34.81013419752616,
+  "customName": "גן ווריזלנד",
+  "city": "Herzliya",
+  "address": "Ha'nassi Y. Ben-Zvi St 104, Herzliya, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 14,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:10:28.622Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68933800e9b9021de0103491"
+  },
+  "latitude": 32.12678817874357,
+  "longitude": 34.80359223679183,
+  "customName": "גן רוזין",
+  "city": "Tel Aviv-Yafo",
+  "address": "Yekhi'el Dov Drezner St 2, Tel Aviv-Yafo, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": false,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 15,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T06:11:08.773Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6894ba69df209f2937db07cc"
+  },
+  "latitude": 32.09624307646228,
+  "longitude": 34.90504878251328,
+  "customName": "גן ציבורי הרב חנזין",
+  "city": "Petah Tikva",
+  "address": "HaRav Hanzin St 33, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": true,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": true,
+  "hasSpaceForDogs": true,
+  "kidsCount": 27,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-08T05:53:59.803Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6898b341d3e4e2ee58931c7b"
+  },
+  "latitude": 32.08848653840725,
+  "longitude": 34.89858845419078,
+  "customName": "גינת טובה רוטברד",
+  "city": "Petah Tikva",
+  "address": "Gordon/Amitsur Avraham, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": false,
+  "hasCarrousel": false,
+  "hasSwings": false,
+  "hasSpringHorse": false,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 5,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-10T15:01:53.245Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6898b456d3e4e2ee58931c83"
+  },
+  "latitude": 32.08766765952712,
+  "longitude": 34.89807171505522,
+  "customName": "גינת אברהם מויאל",
+  "city": "Petah Tikva",
+  "address": "Ya'akov Rabinovits St 5, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 15,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-10T15:01:42.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b5a84ad2e677b8b78b576"
+  },
+  "latitude": 32.0810781798889,
+  "longitude": 34.90209019584363,
+  "customName": "גן אח\"י דקר",
+  "city": "Petah Tikva",
+  "address": "Elazar Fridman St 7, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": true,
+  "kidsCount": 5,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-12T15:15:16.659Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a33ed0d22187f475e7ac85"
+  },
+  "latitude": 32.089545328387665,
+  "longitude": 34.905053623980706,
+  "customName": "גן מלחמת ששת הימים",
+  "city": "Petah Tikva",
+  "address": "David Remez St 65, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": true,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": true,
+  "kidsCount": 15,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-18T14:55:12.986Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a34238d22187f475e7ac95"
+  },
+  "latitude": 32.0865143,
+  "longitude": 34.8932394,
+  "customName": "גן ע\"ש חדווה רשיש",
+  "city": "Petah Tikva",
+  "address": "Rachel HaMeshoreret St 2, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": true,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 15,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-18T15:09:44.514Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a49cf106e519b8cb8f0d95"
+  },
+  "latitude": 32.07731652120672,
+  "longitude": 34.89074599386267,
+  "customName": "גן רוטרי אם המושבות",
+  "city": "Petah Tikva",
+  "address": "Shprinzak/Pines, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": true,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 25,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-19T15:49:05.150Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a6fc3c3bc8d48f7cf611f8"
+  },
+  "latitude": 32.0788164,
+  "longitude": 34.8718588,
+  "customName": "פארק NINJA",
+  "city": "Petah Tikva",
+  "address": "Ha-Partizanim St 21, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": false,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "hasSpringHorse": false,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 5,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-21T11:00:12.509Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a6fed93bc8d48f7cf61209"
+  },
+  "latitude": 32.07581059319565,
+  "longitude": 34.874145969433066,
+  "customName": "גן ע\"ש אביעד ליבמן",
+  "city": "Petah Tikva",
+  "address": "Dani'el Lifshitz St 3, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": true,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 5,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-21T11:11:21.448Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68aaf880f0a1b78408914fd3"
+  },
+  "latitude": 32.160647809707264,
+  "longitude": 34.805894103049155,
+  "customName": "גינת עמיצור לזכרו של עמיצור שפירא",
+  "city": "Hertsliya",
+  "address": "גינת עמיצור, Ha-Menofim St 2, Hertsliya, Israel",
+  "hasWaterTap": true,
+  "hasSlide": false,
+  "hasCarrousel": false,
+  "hasSwings": false,
+  "hasSpringHorse": false,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 5,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-24T11:33:20.267Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ab26bbf0a1b78408914fe8"
+  },
+  "latitude": 32.07639281767801,
+  "longitude": 34.91037019790386,
+  "customName": "גן שטמפפר ע\"ש שלמה יצחק שטמפפר",
+  "city": "Petah Tikva",
+  "address": "גן שטמפפר, Hainbal St 28, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 15,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-24T14:50:35.631Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ac43bd695acbe0cee7e6bc"
+  },
+  "latitude": 32.07929589905599,
+  "longitude": 34.79851917922516,
+  "customName": "",
+  "city": "Tel Aviv-Jaffa",
+  "address": "גן כלבים יגאל אלון ערבי נחל, Yigal Alon St 165-167, Tel Aviv-Jaffa, Israel",
+  "hasWaterTap": true,
+  "hasSlide": false,
+  "hasCarrousel": false,
+  "hasSwings": false,
+  "hasSpringHorse": false,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": true,
+  "kidsCount": 2,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-26T13:10:35.602Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ac7ecf6dc9b8a9676bee1e"
+  },
+  "latitude": 32.089344674851354,
+  "longitude": 34.83137687933087,
+  "customName": "פארק ע\"ש אלי ורנה רובינשטיין",
+  "city": "Bnei Brak",
+  "address": "מצפה גן העצמאות, Shemaiah St, Bnei Brak, Israel",
+  "hasWaterTap": false,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 55,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-25T15:18:39.714Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ad90cd9e47563e343245d7"
+  },
+  "latitude": 32.09107547534452,
+  "longitude": 34.80483185345795,
+  "customName": "גן חרוזים",
+  "city": "Ramat Gan",
+  "address": "Charusim St 30, Ramat Gan, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": true,
+  "kidsCount": 25,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-26T10:47:41.881Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68adcc879e47563e3432462d"
+  },
+  "latitude": 32.07052423350691,
+  "longitude": 34.89621553822802,
+  "customName": "גן אעלה בתמר",
+  "city": "Petah Tikva",
+  "address": "Hagai St 4, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": true,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": true,
+  "hasPublicGym": true,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 25,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-26T15:02:31.509Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ae97c89e47563e34324638"
+  },
+  "latitude": 32.08928181532252,
+  "longitude": 34.869127071438506,
+  "customName": "גן ע\"ש אליעזר ליביו מוסקוביץ",
+  "city": "Petah Tikva",
+  "address": "Ha-Tso'arim St 29, Petah Tikva, Israel",
+  "hasWaterTap": false,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": false,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 5,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-27T05:29:44.905Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68afe4ab9e47563e34324656"
+  },
+  "latitude": 32.08329821701976,
+  "longitude": 34.883868669640805,
+  "customName": "גן בירנבוים ע\"ש יצחק בירנבוים",
+  "city": "Petah Tikva",
+  "address": "Ahad Ha'Am St 6, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 5,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-28T05:10:03.569Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68afe63b9e47563e3432465c"
+  },
+  "latitude": 32.0842403538868,
+  "longitude": 34.87982153892517,
+  "customName": "גן ערים תאומות",
+  "city": "Petah Tikva",
+  "address": "Sender Hadad St 2, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 5,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-28T05:16:43.785Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68afe8c09e47563e34324665"
+  },
+  "latitude": 32.08609473588488,
+  "longitude": 34.87942725419998,
+  "customName": "גן פיק\"א",
+  "city": "Petah Tikva",
+  "address": "Pika St 21, Petah Tikva, Israel",
+  "hasWaterTap": true,
+  "hasSlide": true,
+  "hasCarrousel": false,
+  "hasSwings": true,
+  "hasSpringHorse": true,
+  "hasPublicBooksShelf": false,
+  "hasPingPongTable": false,
+  "hasPublicGym": false,
+  "hasBasketballField": false,
+  "hasFootballField": false,
+  "hasSpaceForDogs": false,
+  "kidsCount": 5,
+  "kidsCountLastUpdated": {
+    "$date": "2025-08-28T05:27:28.425Z"
+  },
+  "__v": 0
+}]

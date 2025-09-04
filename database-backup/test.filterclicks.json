@@ -1,0 +1,3200 @@
+[{
+  "_id": {
+    "$oid": "68867028239d66cd19d1fb22"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-27T18:30:00.942Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6886703b239d66cd19d1fb24"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-07-27T18:30:19.900Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68867057239d66cd19d1fb29"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-27T18:30:47.682Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6886706a239d66cd19d1fb2e"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-27T18:31:06.317Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6886706f239d66cd19d1fb30"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-27T18:31:11.379Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6886707f239d66cd19d1fb35"
+  },
+  "filterName": "hasWaterTap",
+  "createdAt": {
+    "$date": "2025-07-27T18:31:27.162Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68867083239d66cd19d1fb37"
+  },
+  "filterName": "hasSlide",
+  "createdAt": {
+    "$date": "2025-07-27T18:31:31.334Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6886708b239d66cd19d1fb39"
+  },
+  "filterName": "hasCarrousel",
+  "createdAt": {
+    "$date": "2025-07-27T18:31:39.274Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68867090239d66cd19d1fb3b"
+  },
+  "filterName": "hasSwings",
+  "createdAt": {
+    "$date": "2025-07-27T18:31:44.245Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68867095239d66cd19d1fb3d"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-27T18:31:49.890Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6886709b239d66cd19d1fb3f"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-07-27T18:31:55.297Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688670a0239d66cd19d1fb41"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-07-27T18:32:00.877Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688670a4239d66cd19d1fb43"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-27T18:32:04.967Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68867589b7aa8136c28638fd"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-27T18:52:57.934Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6886759ab7aa8136c2863902"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-27T18:53:14.172Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688675bbb7aa8136c286390a"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-27T18:53:47.982Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68870232a9ca69623ae137b5"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-28T04:53:06.881Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688839f9a9ca69623ae13979"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-29T03:03:21.634Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688839ffa9ca69623ae1397b"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-29T03:03:27.974Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68883a03a9ca69623ae1397d"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-07-29T03:03:31.386Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68883a07a9ca69623ae1397f"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-07-29T03:03:35.139Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68883a09a9ca69623ae13981"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-29T03:03:37.926Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68883a0da9ca69623ae13983"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-07-29T03:03:41.364Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68883a11a9ca69623ae13985"
+  },
+  "filterName": "hasSlide",
+  "createdAt": {
+    "$date": "2025-07-29T03:03:45.429Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68886dbba9ca69623ae1398f"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-29T06:44:11.419Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68886dcfa9ca69623ae13991"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-29T06:44:31.784Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6888ac1da9ca69623ae139ab"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-29T11:10:21.255Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6889be72a9ca69623ae139c6"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-30T06:40:50.286Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6889be88a9ca69623ae139c8"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-30T06:41:12.354Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6889bf46a9ca69623ae139cf"
+  },
+  "filterName": "hasWaterTap",
+  "createdAt": {
+    "$date": "2025-07-30T06:44:22.929Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6889bf4da9ca69623ae139d1"
+  },
+  "filterName": "hasSlide",
+  "createdAt": {
+    "$date": "2025-07-30T06:44:29.331Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6889bf54a9ca69623ae139d3"
+  },
+  "filterName": "hasCarrousel",
+  "createdAt": {
+    "$date": "2025-07-30T06:44:36.487Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6889bf5ba9ca69623ae139d5"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-07-30T06:44:43.899Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6889fdd0a7fee3f45355a529"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-07-30T11:11:12.807Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6889fdeda7fee3f45355a52e"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-30T11:11:41.223Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6889fe04a7fee3f45355a533"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-30T11:12:04.534Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a0e1f880583a7ecea32b2"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-07-30T12:20:47.021Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a1415880583a7ecea32fd"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-07-30T12:46:13.467Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a1527880583a7ecea3304"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-30T12:50:47.289Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a15fc880583a7ecea330b"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-30T12:54:20.588Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a185a880583a7ecea3314"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-30T13:04:26.437Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a1d84880583a7ecea332b"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-30T13:26:28.372Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a1d95880583a7ecea3330"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-30T13:26:45.410Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a1db1880583a7ecea3338"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-30T13:27:13.836Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688a62e81ae40f36c2b2882a"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-30T18:22:32.538Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688af09762360e0dd76f2f8b"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-31T04:27:03.211Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688b00b262360e0dd76f2f99"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-31T05:35:46.932Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688b00fe62360e0dd76f2fa0"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-07-31T05:37:02.625Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688b020762360e0dd76f2fb2"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-07-31T05:41:27.945Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688b021b62360e0dd76f2fb7"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-07-31T05:41:47.349Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688b166062360e0dd76f2fd6"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-31T07:08:16.666Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688b166662360e0dd76f2fd8"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-07-31T07:08:22.144Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688b166862360e0dd76f2fda"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-31T07:08:24.933Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688b166c62360e0dd76f2fdc"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-07-31T07:08:28.955Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688b167f62360e0dd76f2fe0"
+  },
+  "filterName": "hasSlide",
+  "createdAt": {
+    "$date": "2025-07-31T07:08:47.467Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688b168762360e0dd76f2fe2"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-31T07:08:55.873Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688b38a862360e0dd76f3010"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-31T09:34:32.198Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688bcd2af81ebe1cbb6e899a"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-07-31T20:08:10.310Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688c41d380068935d2b668f9"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-01T04:25:55.897Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688c424780068935d2b6690d"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-01T04:27:51.201Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688c439580068935d2b66921"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-01T04:33:25.080Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688c43cc80068935d2b66927"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-01T04:34:20.843Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688c43ed80068935d2b66934"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-01T04:34:53.501Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688c594080068935d2b66970"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-01T06:05:52.738Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688ecbe7d961d4819e8ebb33"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-03T02:39:35.914Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688ecbebd961d4819e8ebb35"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-03T02:39:39.565Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688ecbefd961d4819e8ebb37"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-03T02:39:43.659Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688ecbf4d961d4819e8ebb39"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-03T02:39:48.475Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688ecc01d961d4819e8ebb3e"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-03T02:40:01.156Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688ee267f8068fa015baf61e"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-03T04:15:35.983Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688ee273f8068fa015baf623"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-03T04:15:47.469Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688eec41f8068fa015baf643"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-03T04:57:37.152Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688efde5f8068fa015baf658"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-03T06:12:53.839Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688efe5df8068fa015baf661"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-03T06:14:53.942Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688f152df8068fa015baf67f"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-08-03T07:52:13.901Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688f154df8068fa015baf684"
+  },
+  "filterName": "hasWaterTap",
+  "createdAt": {
+    "$date": "2025-08-03T07:52:45.953Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688f1564f8068fa015baf68b"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-03T07:53:08.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688f1d6af8068fa015baf6c0"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-03T08:27:22.527Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688f32ecf8068fa015baf6ef"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-03T09:59:08.703Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688f5e7cf8068fa015baf7c1"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-03T13:05:00.099Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688f6262f8068fa015baf7d4"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-03T13:21:38.861Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689075e2febccecaed674f6a"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-04T08:57:06.827Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689075e8febccecaed674f6c"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-04T08:57:12.729Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689075edfebccecaed674f6e"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-04T08:57:17.790Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689075f8febccecaed674f73"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-04T08:57:28.826Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68907606febccecaed674f78"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-04T08:57:42.806Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68907624febccecaed674f7d"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-08-04T08:58:12.036Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6890a030febccecaed674fb4"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-04T11:57:36.735Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6890a034febccecaed674fb6"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-04T11:57:40.200Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6890a038febccecaed674fb8"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-04T11:57:44.402Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6890a03cfebccecaed674fba"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-08-04T11:57:48.707Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6890a6e2febccecaed674ff1"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-04T12:26:10.496Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6890a6e6febccecaed674ff3"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-04T12:26:14.702Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6890a6f7febccecaed674ff9"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-04T12:26:31.811Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6890a770febccecaed675001"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-04T12:28:32.315Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6890aa61febccecaed675010"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-04T12:41:05.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6890ad21febccecaed675018"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-04T12:52:49.945Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6890ad2afebccecaed67501a"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-04T12:52:58.359Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891c49ffebccecaed675067"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-05T08:45:19.764Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891c4a6febccecaed675069"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-05T08:45:26.884Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891c4abfebccecaed67506b"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-05T08:45:31.255Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891c4affebccecaed67506d"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-08-05T08:45:35.524Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891c4e5febccecaed675072"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-05T08:46:29.624Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891c570febccecaed67507d"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-05T08:48:48.832Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891cb2e35548a158d16f1d4"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-05T09:13:18.047Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891cb3a35548a158d16f1d6"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-05T09:13:30.004Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891cbec35548a158d16f1da"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-05T09:16:28.302Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891cbff35548a158d16f1dd"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-05T09:16:47.403Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891cfd835548a158d16f1f1"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-05T09:33:12.968Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891cfeefebccecaed675085"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-05T09:33:34.015Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6891e01bfebccecaed6750c5"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-05T10:42:35.997Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892db2fa51238356f559c6e"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T04:33:51.118Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892dd61e9b9021de0103319"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T04:43:13.556Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892dd88e9b9021de010331c"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T04:43:52.095Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892de1de9b9021de0103326"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T04:46:21.056Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892e1efe9b9021de010332b"
+  },
+  "filterName": "hasPublicBooksShelf",
+  "createdAt": {
+    "$date": "2025-08-06T05:02:39.753Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892e1fde9b9021de010332d"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T05:02:53.989Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892e74fe9b9021de0103330"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T05:25:35.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892e77be9b9021de0103335"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T05:26:19.582Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892e78ae9b9021de010333a"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-06T05:26:34.923Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892e79ee9b9021de010333f"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-06T05:26:54.208Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892eca2e9b9021de010334d"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T05:48:18.387Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892eccbe9b9021de0103350"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T05:48:59.084Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892ffdae9b9021de010335c"
+  },
+  "filterName": "hasPublicBooksShelf",
+  "createdAt": {
+    "$date": "2025-08-06T07:10:18.411Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892fff3e9b9021de0103361"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-06T07:10:43.141Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892fff8e9b9021de0103363"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T07:10:48.381Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892fffce9b9021de0103365"
+  },
+  "filterName": "hasPublicBooksShelf",
+  "createdAt": {
+    "$date": "2025-08-06T07:10:52.724Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68930009e9b9021de010336a"
+  },
+  "filterName": "hasPublicBooksShelf",
+  "createdAt": {
+    "$date": "2025-08-06T07:11:05.997Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6893000ce9b9021de010336c"
+  },
+  "filterName": "hasPublicBooksShelf",
+  "createdAt": {
+    "$date": "2025-08-06T07:11:08.750Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6893001de9b9021de0103371"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-06T07:11:25.676Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68930020e9b9021de0103373"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-06T07:11:28.540Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68930023e9b9021de0103375"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-06T07:11:31.589Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68930027e9b9021de0103377"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-06T07:11:35.196Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68930029e9b9021de0103379"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-06T07:11:37.821Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6893006ce9b9021de0103383"
+  },
+  "filterName": "hasPublicBooksShelf",
+  "createdAt": {
+    "$date": "2025-08-06T07:12:44.187Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68931235e9b9021de010345c"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T08:28:37.067Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689312a9e9b9021de0103461"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-06T08:30:33.946Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689318b4e9b9021de0103468"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T08:56:20.243Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6893597ce9b9021de01034c5"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-06T13:32:44.140Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689452e680b00da2788a5543"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-07T07:16:54.715Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6894678adf209f2937db07a1"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-07T08:44:58.779Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68947b86df209f2937db07a8"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-07T10:10:14.073Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68947b94df209f2937db07aa"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-07T10:10:28.491Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68947b98df209f2937db07ac"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-07T10:10:32.713Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68947b9cdf209f2937db07ae"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-07T10:10:36.566Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68947ba2df209f2937db07b0"
+  },
+  "filterName": "hasSlide",
+  "createdAt": {
+    "$date": "2025-08-07T10:10:42.568Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68947cacdf209f2937db07bc"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-07T10:15:08.429Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6894bba3df209f2937db07d0"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-07T14:43:47.634Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68958dcbdf209f2937db07de"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-08T05:40:27.237Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68958dd9df209f2937db07e0"
+  },
+  "filterName": "hasPublicBooksShelf",
+  "createdAt": {
+    "$date": "2025-08-08T05:40:41.737Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68958debdf209f2937db07e2"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-08T05:40:59.239Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68959c6ddf209f2937db0837"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-08T06:42:53.433Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68959c7adf209f2937db083c"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-08T06:43:06.917Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6896060bdf209f2937db0850"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-08T14:13:31.645Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68961056df209f2937db085c"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-08T14:57:26.179Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68981e40f18833001c9e0dc1"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-10T04:21:20.939Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68981e44f18833001c9e0dc3"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-10T04:21:24.873Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68981e4df18833001c9e0dc5"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-10T04:21:33.795Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68981e52f18833001c9e0dc7"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-10T04:21:38.148Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68981e61f18833001c9e0dcd"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-10T04:21:53.920Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68981e67f18833001c9e0dd0"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-10T04:21:59.263Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68981e6df18833001c9e0dd3"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-10T04:22:05.706Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68981e73f18833001c9e0dd6"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-10T04:22:11.061Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68984004f18833001c9e0def"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-10T06:45:24.954Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6898b780f18833001c9e0e2e"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-10T15:15:12.232Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c22ad2e677b8b78b471"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-11T07:30:42.436Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c2bad2e677b8b78b476"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-11T07:30:51.996Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c2ead2e677b8b78b478"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-11T07:30:54.831Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c31ad2e677b8b78b47a"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-11T07:30:57.336Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c3aad2e677b8b78b47f"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-11T07:31:06.151Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c3dad2e677b8b78b481"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-11T07:31:09.507Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c46ad2e677b8b78b483"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-11T07:31:18.727Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c4cad2e677b8b78b485"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-11T07:31:24.344Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c51ad2e677b8b78b487"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-11T07:31:29.846Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c6cad2e677b8b78b48c"
+  },
+  "filterName": "hasSlide",
+  "createdAt": {
+    "$date": "2025-08-11T07:31:56.145Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c75ad2e677b8b78b48f"
+  },
+  "filterName": "hasPublicBooksShelf",
+  "createdAt": {
+    "$date": "2025-08-11T07:32:05.711Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68999c79ad2e677b8b78b491"
+  },
+  "filterName": "hasPublicBooksShelf",
+  "createdAt": {
+    "$date": "2025-08-11T07:32:09.647Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6899a019ad2e677b8b78b4a1"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-11T07:47:37.768Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6899ba2ead2e677b8b78b4c6"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-11T09:38:54.651Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6899be1ead2e677b8b78b4d0"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-08-11T09:55:42.520Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6899be3bad2e677b8b78b4d8"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-11T09:56:11.037Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b071bad2e677b8b78b52c"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-12T09:19:23.819Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b0724ad2e677b8b78b52f"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-12T09:19:32.144Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b072cad2e677b8b78b532"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-12T09:19:40.337Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b0730ad2e677b8b78b534"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-12T09:19:44.050Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b0735ad2e677b8b78b536"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-12T09:19:49.426Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b4a38ad2e677b8b78b54d"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-12T14:05:44.800Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b4a45ad2e677b8b78b550"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-12T14:05:57.196Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b4a54ad2e677b8b78b556"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-12T14:06:12.265Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b4a59ad2e677b8b78b558"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-12T14:06:17.763Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b4a5dad2e677b8b78b55a"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-12T14:06:21.503Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689b4a61ad2e677b8b78b55c"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-12T14:06:25.911Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689c3449ba831967aaf38230"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-13T06:44:25.801Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689c344dba831967aaf38232"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-13T06:44:29.702Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689c3450ba831967aaf38234"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-13T06:44:32.986Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689c3462ba831967aaf38239"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-13T06:44:50.187Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689c3472ba831967aaf3823b"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-13T06:45:06.118Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689c3478ba831967aaf3823d"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-13T06:45:12.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689c3489ba831967aaf38242"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-13T06:45:29.596Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689c348dba831967aaf38244"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-13T06:45:33.899Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689c3492ba831967aaf38246"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-13T06:45:38.237Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689c37f8ba831967aaf3824f"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-13T07:00:08.377Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689d91a6ba831967aaf38264"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-14T07:35:02.481Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689d91a9ba831967aaf38266"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-14T07:35:05.864Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689d91acba831967aaf38268"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-14T07:35:08.986Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689d91baba831967aaf3826a"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-14T07:35:22.509Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689d91beba831967aaf3826c"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-14T07:35:26.136Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689d91c1ba831967aaf3826e"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-14T07:35:29.446Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689d91c5ba831967aaf38270"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-14T07:35:33.214Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689d91d6ba831967aaf38275"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-08-14T07:35:50.375Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689d91dfba831967aaf38277"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-14T07:35:59.389Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689d91e3ba831967aaf38279"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-14T07:36:03.609Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689d91e7ba831967aaf3827b"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-14T07:36:07.056Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689ebe4ebfb35b85e984785c"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-15T04:57:50.083Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689f36bf406045342c4ed37c"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-15T13:31:43.987Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689f38ce43a0203ab2666945"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-15T13:40:30.617Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689f38ea43a0203ab266694a"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-15T13:40:58.350Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689f38fc43a0203ab266694d"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-15T13:41:16.790Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689f390843a0203ab266694f"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-15T13:41:28.750Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "689f390b43a0203ab2666951"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-15T13:41:31.294Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a1649c8fd5e1fec027b3b6"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-17T05:11:57.008Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a164a38fd5e1fec027b3b9"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-17T05:12:03.183Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a164a68fd5e1fec027b3bb"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-17T05:12:06.968Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a164a98fd5e1fec027b3bd"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-17T05:12:09.838Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a164ac8fd5e1fec027b3bf"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-17T05:12:12.482Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a164b08fd5e1fec027b3c1"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-17T05:12:16.196Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a164b38fd5e1fec027b3c3"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-17T05:12:19.142Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a164bf8fd5e1fec027b3c9"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-17T05:12:31.660Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a2a591177f86a14ced7740"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-18T04:01:21.766Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a2a595177f86a14ced7742"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-18T04:01:25.798Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a2a59b177f86a14ced7744"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-18T04:01:31.095Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a2a59f177f86a14ced7746"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-18T04:01:35.812Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a2a5a3177f86a14ced7748"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-18T04:01:39.255Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a2a5a9177f86a14ced774a"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-08-18T04:01:45.398Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a2a5ad177f86a14ced774c"
+  },
+  "filterName": "hasWaterTap",
+  "createdAt": {
+    "$date": "2025-08-18T04:01:49.263Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a4157906e519b8cb8f0d4d"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:05.784Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a4157f06e519b8cb8f0d4f"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:11.610Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a4158206e519b8cb8f0d51"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:14.166Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a4158506e519b8cb8f0d53"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:17.573Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a4158906e519b8cb8f0d55"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:21.274Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a4158c06e519b8cb8f0d57"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:24.737Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a4158f06e519b8cb8f0d59"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:27.369Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a4159206e519b8cb8f0d5b"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:30.283Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a4159406e519b8cb8f0d5d"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:32.836Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a4159806e519b8cb8f0d5f"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:36.646Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a4159e06e519b8cb8f0d61"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:42.006Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a415a006e519b8cb8f0d63"
+  },
+  "filterName": "hasCarrousel",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:44.635Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a415a406e519b8cb8f0d65"
+  },
+  "filterName": "hasSlide",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:48.143Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a415a906e519b8cb8f0d67"
+  },
+  "filterName": "hasWaterTap",
+  "createdAt": {
+    "$date": "2025-08-19T06:11:53.183Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a49df906e519b8cb8f0d9d"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-19T15:53:29.636Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a583ba05ce950eb52dacac"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-20T08:13:46.706Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a583be05ce950eb52dacae"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-20T08:13:50.553Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a583c305ce950eb52dacb0"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-20T08:13:55.515Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a583c805ce950eb52dacb2"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-20T08:14:00.745Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a583cd05ce950eb52dacb4"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-20T08:14:05.169Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a583d105ce950eb52dacb6"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-20T08:14:09.308Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a583d505ce950eb52dacb8"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-20T08:14:13.198Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a583d805ce950eb52dacba"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-20T08:14:16.107Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a583dc05ce950eb52dacbc"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-20T08:14:20.607Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a583e405ce950eb52dacbe"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-20T08:14:28.689Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a6e6bc3bc8d48f7cf611ee"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-21T09:28:28.327Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a6e6d73bc8d48f7cf611f0"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-21T09:28:55.986Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a704af3bc8d48f7cf61216"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-21T11:36:15.431Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a704b23bc8d48f7cf61218"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-21T11:36:18.670Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a704b73bc8d48f7cf6121a"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-21T11:36:23.682Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a882b2f0a1b78408914f95"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-22T14:46:10.202Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a882b5f0a1b78408914f97"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-22T14:46:13.543Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a882b7f0a1b78408914f99"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-22T14:46:15.948Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a882bbf0a1b78408914f9b"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-22T14:46:19.093Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a882bef0a1b78408914f9d"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-22T14:46:22.616Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a882c1f0a1b78408914f9f"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-22T14:46:25.493Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a882c4f0a1b78408914fa1"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-22T14:46:28.674Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68a882c8f0a1b78408914fa3"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-22T14:46:32.787Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68aaa1abf0a1b78408914faf"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-24T05:22:51.430Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68aaa1aef0a1b78408914fb1"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-24T05:22:54.140Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68aaa1b2f0a1b78408914fb3"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-24T05:22:58.259Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68aaa1b5f0a1b78408914fb5"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-24T05:23:01.718Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68aaa1baf0a1b78408914fb7"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-24T05:23:06.591Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68aaa1bff0a1b78408914fb9"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-24T05:23:11.088Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68aaa1c3f0a1b78408914fbb"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-24T05:23:15.448Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68aaa1c7f0a1b78408914fbd"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-24T05:23:19.039Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ab02f2f0a1b78408914fdd"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-24T12:17:54.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ad95049e47563e343245f0"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-26T11:05:40.371Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ad95079e47563e343245f2"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-26T11:05:43.007Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ad950b9e47563e343245f4"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-26T11:05:47.599Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ad950f9e47563e343245f6"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-26T11:05:51.416Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ad95129e47563e343245f8"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-26T11:05:54.154Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ad951e9e47563e343245fd"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-26T11:06:06.286Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ad95219e47563e343245ff"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-26T11:06:09.115Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ad95269e47563e34324601"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-08-26T11:06:14.086Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ad95299e47563e34324603"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-26T11:06:17.847Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ad952e9e47563e34324605"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-26T11:06:22.547Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b001259e47563e34324670"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-28T07:11:33.739Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b00fc09e47563e3432467d"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-28T08:13:52.711Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b00fe79e47563e3432467f"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-28T08:14:31.268Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b013089e47563e34324687"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-08-28T08:27:52.249Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b03b709e47563e34324692"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-08-28T11:20:16.099Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b03b759e47563e34324694"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-08-28T11:20:21.027Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b03b7a9e47563e34324696"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-08-28T11:20:26.669Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b51686427de5d98f93b9e3"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-09-01T03:44:06.283Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b51686427de5d98f93b9e9"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-09-01T03:44:06.295Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b51686427de5d98f93b9eb"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-09-01T03:44:06.297Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b51686427de5d98f93b9ed"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-09-01T03:44:06.298Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b51686427de5d98f93b9e5"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-09-01T03:44:06.292Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b51686427de5d98f93b9e7"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-09-01T03:44:06.293Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b54935427de5d98f93ba01"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-09-01T07:20:21.801Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b5493f427de5d98f93ba03"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-09-01T07:20:31.397Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b55e44427de5d98f93ba0b"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-09-01T08:50:12.091Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b55e47427de5d98f93ba0d"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-09-01T08:50:15.541Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b69b4f427de5d98f93ba1b"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-09-02T07:22:55.259Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b69b52427de5d98f93ba1d"
+  },
+  "filterName": "hasPublicGym",
+  "createdAt": {
+    "$date": "2025-09-02T07:22:58.071Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b69b5b427de5d98f93ba1f"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-09-02T07:23:07.648Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b69b64427de5d98f93ba21"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-09-02T07:23:16.207Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b69b6e427de5d98f93ba26"
+  },
+  "filterName": "hasBasketballField",
+  "createdAt": {
+    "$date": "2025-09-02T07:23:26.278Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b69b72427de5d98f93ba28"
+  },
+  "filterName": "hasFootballField",
+  "createdAt": {
+    "$date": "2025-09-02T07:23:30.555Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b69b75427de5d98f93ba2a"
+  },
+  "filterName": "hasSpaceForDogs",
+  "createdAt": {
+    "$date": "2025-09-02T07:23:33.680Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b69b7e427de5d98f93ba2c"
+  },
+  "filterName": "hasWaterTap",
+  "createdAt": {
+    "$date": "2025-09-02T07:23:42.746Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b69b83427de5d98f93ba2e"
+  },
+  "filterName": "hasSwings",
+  "createdAt": {
+    "$date": "2025-09-02T07:23:47.897Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b69b87427de5d98f93ba30"
+  },
+  "filterName": "hasSpringHorse",
+  "createdAt": {
+    "$date": "2025-09-02T07:23:51.990Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68b69b97427de5d98f93ba36"
+  },
+  "filterName": "hasPingPongTable",
+  "createdAt": {
+    "$date": "2025-09-02T07:24:07.656Z"
+  },
+  "__v": 0
+}]

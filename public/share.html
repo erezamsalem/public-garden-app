@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Public Garden</title>
+    <link rel="icon" href="/icons/slide-icon.jpg" type="image/jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add this style to ensure the map has a visible height */
+        #map {
+            height: 250px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto p-4" style="max-width: 350px;">
+        <h1 class="text-2xl font-bold text-gray-800 text-center mb-4">Shared Public Garden</h1>
+        
+        <div id="map" class="mb-4 rounded-lg shadow"></div>
+
+        <div id="location-status" class="mb-4"></div>
+
+        <div id="garden-card-container">
+            <p class="text-center text-gray-600">Loading garden details...</p>
+        </div>
+
+         <footer id="page-footer">
+            <a href="https://erez-amsalem-web-developer.azurewebsites.net/" target="_blank" rel="noopener noreferrer">
+                © Erez Amsalem
+            </a>
+        </footer>
+    </div>
+
+    <div id="geminiModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+        <div class="relative top-20 mx-auto p-5 border w-full max-w-sm shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <div class="flex justify-center items-center mb-4">
+                    <h3 id="geminiModalTitle" class="text-xl leading-6 font-medium text-gray-900"></h3>
+                </div>
+                <div class="px-4 py-3">
+                    <p id="geminiModalContent" class="text-sm text-gray-700 gemini-modal-content-area"></p>
+                    <div id="geminiLoadingIndicator" class="hidden mt-4 flex justify-center items-center">
+                        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Loading insight...
+                    </div>
+                </div>
+                <div class="items-center px-4 py-3">
+                    <button id="closeGeminiModalBtn" class="px-4 py-2 bg-purple-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-purple-600">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="share.js"></script>
+</body>
+</html>

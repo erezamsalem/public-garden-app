@@ -1,0 +1,52 @@
+# deployment.yaml
+
+# --- Deployment Object ---
+# This manages the application pods, ensuring they are always running.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: public-garden-deployment
+spec:
+  replicas: 1 # Run a single instance of our application
+  selector:
+    matchLabels:
+      app: public-garden-app # This selector must match the pod's labels below
+  template:
+    metadata:
+      labels:
+        app: public-garden-app # Label for the pods created by this deployment
+    spec:
+      containers:
+        - name: public-garden-container
+          # This now points to your image on Docker Hub.
+          image: erezamsalem/public-garden-app:1.0
+          # 'Always' ensures the cluster pulls the latest version of the image tag.
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000 # The port your Node.js app listens on
+          envFrom:
+            # This injects all key-value pairs from our secret
+            # as environment variables into the container.
+            - secretRef:
+                name: public-garden-secrets
+
+---
+
+# --- Service Object ---
+# This exposes the deployment to the network.
+apiVersion: v1
+kind: Service
+metadata:
+  name: public-garden-service
+spec:
+  # 'LoadBalancer' type automatically creates an external endpoint.
+  # Minikube has special integration for this service type.
+  type: LoadBalancer
+  selector:
+    # This selector tells the service to send traffic to pods
+    # with the 'app: public-garden-app' label.
+    app: public-garden-app
+  ports:
+    - protocol: TCP
+      port: 80 # The port the service will be exposed on
+      targetPort: 3000 # The port to forward traffic to on the container

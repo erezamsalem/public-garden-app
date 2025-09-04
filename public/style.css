@@ -1,0 +1,269 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #d8a7e2, #a8e6cf);
+  min-height: 100vh;
+}
+
+.bg-soft-green {
+  background-color: #a8e6cf;
+}
+
+.bg-soft-purple {
+  background-color: #d8a7e2;
+}
+
+/* Apply map styles to both map containers */
+#map,
+#admin-map {
+  height: 400px;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: #e0e0e0;
+}
+
+.gm-style .gm-style-iw-c {
+  padding: 12px !important;
+  border-radius: 12px !important;
+  background-color: #f0fdf4 !important;
+}
+
+.gm-style-iw-d {
+  overflow: hidden !important;
+}
+
+.gm-style .gm-style-iw-t::after {
+  background: #f0fdf4 !important;
+}
+
+#instruction-text {
+  color: #2b6cb0;
+  font-weight: bold;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+/* This class will apply grayscale and opacity when present on an image */
+.img-grayscale {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+#page-footer {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4A5568;
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
+}
+
+#page-footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+#page-footer a:hover {
+  color: #1A202C;
+}
+
+#success-popup {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Styles for Gemini Modal */
+.gemini-modal-content-area {
+  max-height: 60vh;
+  overflow-y: auto;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* Custom styles for hamburger menu */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+.header-content h1 {
+  margin-right: auto;
+  padding-right: 1rem;
+}
+
+.nav-links {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  padding: 0.5rem 0;
+  z-index: 15;
+  overflow: hidden;
+  height: auto;
+}
+
+.nav-links.open {
+  display: flex;
+  max-height: 80vh; /* This defines the height of the entire dropdown */
+  overflow-y: hidden; /* CORRECT: Prevents the container itself from scrolling */
+  overflow-x: hidden; /* Good to add to prevent horizontal overflow issues */
+}
+
+
+/* Container for main menu items */
+#main-menu-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0;
+}
+
+/* Sub-menu container */
+#filter-submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%; /* CORRECT: Make submenu take the full height of its parent */
+  background-color: #f7f7f7;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 16;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto; /* This now works correctly within the defined height */
+  /* REMOVED: max-height: 80vh; from here */
+}
+
+/* When .nav-links has 'submenu-active' class, slide menus */
+.nav-links.submenu-active #main-menu-wrapper {
+  transform: translateX(-100%);
+}
+
+.nav-links.submenu-active #filter-submenu {
+  transform: translateX(-100%);
+}
+
+.nav-links button {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  color: #4A5568;
+  font-weight: 600;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-links button:hover {
+  background-color: #e2e8f0;
+}
+
+/* Style the buttons inside the sub-menu */
+.sub-menu button {
+  padding-left: 2rem;
+  font-weight: normal;
+  color: #4A5568;
+  display: flex;
+  align-items: center;
+}
+
+.sub-menu button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+
+.sub-menu button:hover {
+  background-color: #e2e8f0;
+}
+
+/* Specific style for the back button */
+.sub-menu .back-button {
+  font-weight: bold;
+  color: #6B7280;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+  padding-left: 0.75rem;
+}
+
+.sub-menu .back-button:hover {
+  background-color: #e2e8f0;
+}
+
+.hamburger-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  font-size: 2.0rem;
+  cursor: pointer;
+  color: #4A5568;
+  background: none;
+  border: none;
+  margin: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 21;
+  box-sizing: border-box;
+}
+
+.hamburger-icon i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+}
+
+/* Responsive adjustments for larger screens (e.g., laptops) */
+@media (min-width: 768px) {
+  .header-content {
+    padding-right: 0;
+  }
+
+  .header-content h1 {
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
+
+/* Specific override for 350x950 to ensure hamburger is active */
+@media (max-width: 767px) {
+  .hamburger-icon {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    z-index: 21;
+  }
+
+  .nav-links {
+    /* Inherits from default .nav-links rules */
+  }
+}

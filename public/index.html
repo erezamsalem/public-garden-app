@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Public Garden Locator</title>
+    <link rel="icon" href="/icons/slide-icon.jpg" type="image/jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mx-auto p-4" style="max-width: 350px;">
+        <div class="text-center mb-4 header-content">
+            <h1 class="text-3xl font-bold text-gray-800">Public Garden Locator</h1>
+            <button id="hamburger-btn" class="hamburger-icon">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="main-nav" class="nav-links">
+                <div id="main-menu-wrapper">
+                    <button id="main-page-nav-btn-menu" class="text-gray-700 font-bold">🏠 Main Page 🏠</button>
+                    <button id="show-gardens-menu-btn" class="text-gray-700 font-bold">Show gardens with...</button>
+                    <button id="app-stats-nav-btn" class="text-gray-700 font-bold">📊 App Statistics 📊</button>
+                    <button id="admin-register-nav-btn" class="text-gray-700 font-bold">🖊️Admin Registration🖊️</button>
+                    <button id="admin-page-nav-btn" class="text-gray-700 font-bold">🔐Admin Page🔑</button>
+                    <button id="logout-admin-btn" class="text-red-500 font-bold hidden">🎈Logout🎈</button>
+                </div>
+                
+                <div id="filter-submenu" class="sub-menu">
+                    <button class="filter-option back-button" data-filter="back">← Back</button>
+                    <button class="filter-option" data-filter="all">
+                        🌳 All Gardens
+                    </button>
+                    <button class="filter-option" data-filter="hasWaterTap">
+                        <img src="/icons/water-tap-icon.png" class="w-5 h-5 mr-2" alt="Water Tap Icon"> Water Tap
+                    </button>
+                    <button class="filter-option" data-filter="hasSlide">
+                        <img src="/icons/slide-icon.jpg" class="w-5 h-5 mr-2" alt="Slide Icon"> Slide
+                    </button>
+                    <button class="filter-option" data-filter="hasCarrousel">
+                        <img src="/icons/carousel-icon.jpeg" class="w-5 h-5 mr-2" alt="Carrousel Icon"> Carrousel
+                    </button>
+                    <button class="filter-option" data-filter="hasSwings">
+                        <img src="/icons/swing-icon.jpg" class="w-5 h-5 mr-2" alt="Swings Icon"> Swings
+                    </button>
+                    <button class="filter-option" data-filter="hasSpringHorse">
+                        <img src="/icons/spring-horse.png" class="w-5 h-5 mr-2" alt="Spring Horse Icon"> Spring Horse
+                    </button>
+                    <button class="filter-option" data-filter="hasPublicBooksShelf">
+                        <img src="/icons/public-books.jpg" class="w-5 h-5 mr-2" alt="Public Books Shelf Icon"> Public Books Shelf
+                    </button>
+                    <button class="filter-option" data-filter="hasPingPongTable">
+                        <img src="/icons/ping-pong.jpg" class="w-5 h-5 mr-2" alt="Ping Pong Table Icon"> Ping Pong Table
+                    </button>
+                    <button class="filter-option" data-filter="hasPublicGym">
+                        <img src="/icons/public-gym-icon.png" class="w-5 h-5 mr-2" alt="Public Gym Icon"> Public Gym
+                    </button>
+                    <button class="filter-option" data-filter="hasBasketballField">
+                        <img src="/icons/basketball-field.png" class="w-5 h-5 mr-2" alt="Basketball Field Icon"> Basketball Field
+                    </button>
+                    <button class="filter-option" data-filter="hasFootballField">
+                        <img src="/icons/football-field.jpg" class="w-5 h-5 mr-2" alt="Football Field Icon"> Football Field
+                    </button>
+                    <button class="filter-option" data-filter="hasSpaceForDogs">
+                        <img src="/icons/dogs.jpg" class="w-5 h-5 mr-2" alt="Dogs Space Icon"> Space for Dogs
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <p class="text-gray-600 text-center mb-4">Find and share the best public gardens</p>
+
+        <div id="main-app-content">
+            <div id="map" class="mb-4"></div>
+            <p id="instruction-text" class="text-center mb-4 hidden">Click on the map to place the new garden.</p>
+            <div class="grid grid-cols-1 gap-2 mb-4">
+                <button id="add-garden-at-location-btn" class="bg-[#8B5CF6] hover:bg-[#7c3aed] transition-colors text-white font-bold py-2 px-4 rounded-full w-full shadow-lg">Add at My Location</button>
+                <button id="choose-location-btn" class="bg-green-500 hover:bg-green-600 transition-colors text-white font-bold py-2 px-4 rounded-full w-full shadow-lg">Choose on Map</button>
+            </div>
+
+            <div id="location-status" class="mb-4"></div>
+
+            <div id="message-container" class="mb-4"></div>
+
+            <div id="gardens-list" class="space-y-4"></div>
+        </div>
+
+        <div id="admin-page-content" class="hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Admin Dashboard</h2>
+            <div id="admin-message-container" class="mb-4 text-center text-green-600"></div>
+            <div id="admin-map" class="mb-4"></div>
+            <div id="admin-gardens-list" class="space-y-4">
+                <p class="text-center text-gray-600">Loading gardens for administration...</p>
+            </div>
+        </div>
+
+        <footer id="page-footer">
+            <a href="https://erez-amsalem-web-developer.azurewebsites.net/" target="_blank" rel="noopener noreferrer">
+                © Erez Amsalem
+            </a>
+        </footer>
+    </div>
+
+    <div id="admin-register-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+        <div class="relative top-20 mx-auto p-5 border w-full max-w-sm shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">🖊️Admin Registration🖊️</h3>
+                <div id="admin-register-message" class="text-red-500 text-sm mt-2"></div>
+                <div class="mt-2 px-7 py-3">
+                    <form id="admin-register-form">
+                        <div class="mb-4 text-left">
+                            <label for="admin-name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                            <input type="text" id="admin-name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="admin-email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                            <input type="email" id="admin-email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="admin-password" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
+                            <input type="password" id="admin-password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="secret-code" class="block text-gray-700 text-sm font-bold mb-2">Secret Code:</label>
+                            <input type="password" id="secret-code" name="secretCode" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="items-center px-4 py-3">
+                            <button type="submit" class="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-600">Register</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="items-center px-4 pb-3">
+                    <button id="close-admin-register-modal-btn" class="px-4 py-2 bg-gray-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-gray-700">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin-login-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+        <div class="relative top-20 mx-auto p-5 border w-full max-w-sm shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">🔐Admin Login🔑</h3>
+                <div id="admin-login-message" class="text-red-500 text-sm mt-2"></div>
+                <div class="mt-2 px-7 py-3">
+                    <form id="admin-login-form">
+                        <div class="mb-4 text-left">
+                            <label for="login-email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                            <input type="email" id="login-email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-6 text-left">
+                            <label for="login-password" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
+                            <input type="password" id="login-password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="items-center px-4 py-3">
+                            <button type="submit" class="px-4 py-2 bg-purple-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-purple-600">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="items-center px-4 pb-3">
+                    <button id="close-admin-login-modal-btn" class="px-4 py-2 bg-gray-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-gray-700">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="add-garden-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-40">
+        <div class="relative top-20 mx-auto p-5 border w-full max-w-sm shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <div class="flex justify-center items-center mb-2"><svg class="w-6 h-6 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.212 6.212A3 3 0 0012 4.077V4a3 3 0 00-6 0v.077a3 3 0 00-3.212 2.135A3 3 0 004 12v3a1 1 0 102 0v-3a1 1 0 10-2 0v-1a1 1 0 011-1 1 1 0 100-2h1a1 1 0 100-2H8a1 1 0 100 2h1a1 1 0 100 2H6a3 3 0 00-2.828 2.828A1 1 0 102 12V9a1 1 0 011-1h1.077a3 3 0 004.846 0H16a1 1 0 011 1v3a1 1 0 102 0v-3a3 3 0 00-1.788-2.788z"></path></svg><h3 class="text-lg leading-6 font-medium text-gray-900">Add a New Garden</h3></div>
+                <div class="mt-2 px-7 py-3">
+                    <form id="add-garden-form">
+                        <div class="mb-4 text-left">
+                            <label for="add-custom-name" class="block text-gray-700 text-sm font-bold mb-2">Custom Garden Name (Optional):</label>
+                            <input type="text" id="add-custom-name" name="customName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., The Big Oak Park">
+                        </div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/water-tap-icon.png" class="w-5 h-5 mr-2"><label for="has-water-tap" class="text-gray-700 text-sm font-bold">Has Water Tap?</label></div><input type="checkbox" id="has-water-tap" name="hasWaterTap" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/slide-icon.jpg" class="w-5 h-5 mr-2"><label for="has-slide" class="text-gray-700 text-sm font-bold">Has Slide?</label></div><input type="checkbox" id="has-slide" name="hasSlide" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/carousel-icon.jpeg" class="w-5 h-5 mr-2"><label for="has-carrousel" class="text-gray-700 text-sm font-bold">Has Carrousel?</label></div><input type="checkbox" id="has-carrousel" name="hasCarrousel" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/swing-icon.jpg" class="w-5 h-5 mr-2"><label for="has-swings" class="text-gray-700 text-sm font-bold">Has Swings?</label></div><input type="checkbox" id="has-swings" name="hasSwings" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/spring-horse.png" class="w-5 h-5 mr-2"><label for="has-spring-horse" class="text-gray-700 text-sm font-bold">Has Spring Horse?</label></div><input type="checkbox" id="has-spring-horse" name="hasSpringHorse" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/public-books.jpg" class="w-5 h-5 mr-2"><label for="has-public-books-shelf" class="text-gray-700 text-sm font-bold">Has Public Books Shelf?</label></div><input type="checkbox" id="has-public-books-shelf" name="hasPublicBooksShelf" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/ping-pong.jpg" class="w-5 h-5 mr-2"><label for="has-ping-pong-table" class="text-gray-700 text-sm font-bold">Has Ping Pong Table?</label></div><input type="checkbox" id="has-ping-pong-table" name="hasPingPongTable" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/public-gym-icon.png" class="w-5 h-5 mr-2"><label for="has-public-gym" class="text-gray-700 text-sm font-bold">Has Public Gym?</label></div><input type="checkbox" id="has-public-gym" name="hasPublicGym" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/basketball-field.png" class="w-5 h-5 mr-2"><label for="has-basketball-field" class="text-gray-700 text-sm font-bold">Has Basketball Field?</label></div><input type="checkbox" id="has-basketball-field" name="hasBasketballField" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/football-field.jpg" class="w-5 h-5 mr-2"><label for="has-football-field" class="text-gray-700 text-sm font-bold">Has Football Field?</label></div><input type="checkbox" id="has-football-field" name="hasFootballField" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/dogs.jpg" class="w-5 h-5 mr-2"><label for="has-space-for-dogs" class="text-gray-700 text-sm font-bold">Has Space for Dogs?</label></div><input type="checkbox" id="has-space-for-dogs" name="hasSpaceForDogs" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 text-left"><label for="kids-count" class="flex items-center text-gray-700 text-sm font-bold mb-2"><svg class="w-5 h-5 mr-2 text-gray-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg><span>Number of Kids Right Now</span></label><input type="number" id="kids-count" name="kidsCount" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" min="0" value="0"></div>
+                        <div class="items-center px-4 py-3"><button id="save-garden-btn" type="submit" class="px-4 py-2 bg-green-700 text-white text-base font-medium rounded-md w-full shadow-lg">Save Garden</button></div>
+                    </form>
+                </div>
+                <div class="items-center px-4 pb-3"><button id="close-modal-btn" class="px-4 py-2 bg-gray-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-gray-700">Cancel</button></div>
+            </div>
+        </div>
+    </div>
+    <div id="success-popup" class="fixed top-5 right-5 bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transform translate-y-2 z-50">
+        Garden added successfully! ✅
+    </div>
+
+    <div id="geminiModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+        <div class="relative top-20 mx-auto p-5 border w-full max-w-sm shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <div class="flex justify-center items-center mb-4">
+                    <h3 id="geminiModalTitle" class="text-xl leading-6 font-medium text-gray-900"></h3>
+                </div>
+                <div class="px-4 py-3">
+                    <p id="geminiModalContent" class="text-sm text-gray-700 gemini-modal-content-area"></p>
+                    <div id="geminiLoadingIndicator" class="hidden mt-4 flex justify-center items-center">
+                        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Loading insight...
+                    </div>
+                </div>
+                <div class="items-center px-4 py-3">
+                    <button id="closeGeminiModalBtn" class="px-4 py-2 bg-purple-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-purple-600">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-garden-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+        <div class="relative top-20 mx-auto p-5 border w-full max-w-sm shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Edit Garden</h3>
+                <div id="edit-garden-message" class="text-red-500 text-sm mt-2"></div>
+                <div class="mt-2 px-7 py-3">
+                    <form id="edit-garden-form">
+                        <input type="hidden" id="edit-garden-id" name="gardenId">
+                        <div class="mb-4 text-left">
+                            <label for="edit-custom-name" class="block text-gray-700 text-sm font-bold mb-2">Custom Garden Name:</label>
+                            <input type="text" id="edit-custom-name" name="customName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="edit-city" class="block text-gray-700 text-sm font-bold mb-2">City:</label>
+                            <input type="text" id="edit-city" name="city" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="edit-address" class="block text-gray-700 text-sm font-bold mb-2">Address:</label>
+                            <input type="text" id="edit-address" name="address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="edit-latitude" class="block text-gray-700 text-sm font-bold mb-2">Latitude:</label>
+                            <input type="number" step="any" id="edit-latitude" name="latitude" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="edit-longitude" class="block text-gray-700 text-sm font-bold mb-2">Longitude:</label>
+                            <input type="number" step="any" id="edit-longitude" name="longitude" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/water-tap-icon.png" class="w-5 h-5 mr-2"><label for="edit-has-water-tap" class="text-gray-700 text-sm font-bold">Has Water Tap?</label></div><input type="checkbox" id="edit-has-water-tap" name="hasWaterTap" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/slide-icon.jpg" class="w-5 h-5 mr-2"><label for="edit-has-slide" class="text-gray-700 text-sm font-bold">Has Slide?</label></div><input type="checkbox" id="edit-has-slide" name="hasSlide" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/carousel-icon.jpeg" class="w-5 h-5 mr-2"><label for="edit-has-carrousel" class="text-gray-700 text-sm font-bold">Has Carrousel?</label></div><input type="checkbox" id="edit-has-carrousel" name="hasCarrousel" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/swing-icon.jpg" class="w-5 h-5 mr-2"><label for="edit-has-swings" class="text-gray-700 text-sm font-bold">Has Swings?</label></div><input type="checkbox" id="edit-has-swings" name="hasSwings" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/spring-horse.png" class="w-5 h-5 mr-2"><label for="edit-has-spring-horse" class="text-gray-700 text-sm font-bold">Has Spring Horse?</label></div><input type="checkbox" id="edit-has-spring-horse" name="hasSpringHorse" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/public-books.jpg" class="w-5 h-5 mr-2"><label for="edit-has-public-books-shelf" class="text-gray-700 text-sm font-bold">Has Public Books Shelf?</label></div><input type="checkbox" id="edit-has-public-books-shelf" name="hasPublicBooksShelf" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/ping-pong.jpg" class="w-5 h-5 mr-2"><label for="edit-has-ping-pong-table" class="text-gray-700 text-sm font-bold">Has Ping Pong Table?</label></div><input type="checkbox" id="edit-has-ping-pong-table" name="hasPingPongTable" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/public-gym-icon.png" class="w-5 h-5 mr-2"><label for="edit-has-public-gym" class="text-gray-700 text-sm font-bold">Has Public Gym?</label></div><input type="checkbox" id="edit-has-public-gym" name="hasPublicGym" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/basketball-field.png" class="w-5 h-5 mr-2"><label for="edit-has-basketball-field" class="text-gray-700 text-sm font-bold">Has Basketball Field?</label></div><input type="checkbox" id="edit-has-basketball-field" name="hasBasketballField" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/football-field.jpg" class="w-5 h-5 mr-2"><label for="edit-has-football-field" class="text-gray-700 text-sm font-bold">Has Football Field?</label></div><input type="checkbox" id="edit-has-football-field" name="hasFootballField" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 flex items-center justify-between"><div class="flex items-center"><img src="/icons/dogs.jpg" class="w-5 h-5 mr-2"><label for="edit-has-space-for-dogs" class="text-gray-700 text-sm font-bold">Has Space for Dogs?</label></div><input type="checkbox" id="edit-has-space-for-dogs" name="hasSpaceForDogs" class="form-checkbox h-5 w-5 text-green-600"></div>
+                        <div class="mb-4 text-left"><label for="edit-kids-count" class="flex items-center text-gray-700 text-sm font-bold mb-2"><svg class="w-5 h-5 mr-2 text-gray-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg><span>Number of Kids Right Now</span></label><input type="number" id="edit-kids-count" name="kidsCount" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" min="0"></div>
+                        <div class="items-center px-4 py-3"><button id="save-edited-garden-btn" type="submit" class="px-4 py-2 bg-green-700 text-white text-base font-medium rounded-md w-full shadow-sm">Save Changes</button></div>
+                    </form>
+                </div>
+                <div class="items-center px-4 pb-3"><button id="close-edit-modal-btn" class="px-4 py-2 bg-gray-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-gray-700">Cancel</button></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="stats-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50 flex items-center justify-center p-4">
+         <div class="p-5 border w-full max-w-sm shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">📊 App Statistics 📊</h3>
+                <p class="text-sm text-gray-500 mb-4">Filter Search Counts</p>
+                <div id="stats-content" class="text-left space-y-4 max-h-96 overflow-y-auto p-2">
+                    </div>
+                <div class="items-center px-4 py-3 mt-4">
+                    <button id="close-stats-modal-btn" class="px-4 py-2 bg-gray-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-gray-700">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
