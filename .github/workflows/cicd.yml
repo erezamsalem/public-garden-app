@@ -28,10 +28,16 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/public-garden-app:${{ github.sha }}
 
+      # New Step: Securely write the kubeconfig from secrets to a temporary file
+      - name: Set up Kubeconfig
+        run: |
+          echo "${{ secrets.KUBE_CONFIG }}" > $HOME/kubeconfig
+        shell: bash
+
+      # Final Step: Use the new temporary kubeconfig file for deployment
       - name: Deploy to Minikube
         run: |
           echo "Deploying to Minikube..."
-          # This command now explicitly tells kubectl where to find the configuration
-          # file needed to connect to your Minikube cluster.
-          kubectl set image deployment/public-garden-deployment public-garden-container=${{ secrets.DOCKERHUB_USERNAME }}/public-garden-app:${{ github.sha }} -n public-garden-app --kubeconfig="C:\Users\ereza\.kube\config"
+          kubectl set image deployment/public-garden-deployment public-garden-container=${{ secrets.DOCKERHUB_USERNAME }}/public-garden-app:${{ github.sha }} -n public-garden-app --kubeconfig=$HOME/kubeconfig
+        shell: bash
 
