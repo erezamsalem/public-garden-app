@@ -292,7 +292,7 @@ function playAnimation(animationScript) {
                 'swing': '/icons/swing-icon.jpg',
                 'carousel': '/icons/carousel-icon.jpeg',
                 'spring_horse': '/icons/spring-horse.png',
-                'kids_playing': '/icons/slide-icon.jpg', // MODIFIED: Use a more generic icon
+                'kids_playing': '/icons/kids-playing.jpg', // MODIFIED: Use a more generic icon
                 'dog_park': '/icons/dogs.jpg',
                 'basketball': '/icons/basketball-field.png',
                 'football': '/icons/football-field.jpg',
@@ -300,7 +300,7 @@ function playAnimation(animationScript) {
                 'ping_pong': '/icons/ping-pong.jpg',
                 'books': '/icons/public-books.jpg',
                 'water_tap': '/icons/water-tap-icon.png',
-                'park_entrance': '/icons/slide-icon.jpg'
+                'park_entrance': '/icons/park-entrence.jpg'
             };
             const iconSrc = iconMap[sceneData.icon] || '/icons/slide-icon.jpg';
 

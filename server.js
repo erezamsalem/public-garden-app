@@ -376,5 +376,3 @@ app.get('/api/stats/filter-clicks', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`✅ Server is running on http://localhost:${PORT} ✅`);
 });
-
-// --- Start the Server ---
