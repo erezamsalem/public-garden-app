@@ -1,10 +1,11 @@
 // A global variable to hold the garden data so the map callback can access it
 let gardenForMap = null;
+// A global variable to hold the active animation timer
+let activeAnimationTimeout = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
     const cardContainer = document.getElementById('garden-card-container');
 
-    // 1. Get the garden ID from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const gardenId = urlParams.get('id');
 
@@ -14,7 +15,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        // 2. Fetch the garden data first
         const response = await fetch(`/api/gardens/${gardenId}`);
         if (!response.ok) {
             throw new Error((await response.json()).message || 'Garden not found');
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         gardenForMap = garden;
 
-        // 3. Render map and card, then find location
         loadGoogleMapsScript();
         cardContainer.innerHTML = createGardenCardHTML(garden);
         findLocationAndUpdateDirections(garden);
@@ -36,12 +35,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Add event listener for the dynamically created Gemini button
     cardContainer.addEventListener('click', (e) => {
         if (e.target.classList.contains('gemini-insight-btn')) {
-            getGardenInsight(e.target.dataset);
+            requestGardenAnimation(e.target.dataset);
         }
     });
 
     // Add event listener for the modal's close button
     document.getElementById('closeGeminiModalBtn').addEventListener('click', () => {
+        const container = document.getElementById('geminiAnimationContainer');
+        if (activeAnimationTimeout) {
+            clearTimeout(activeAnimationTimeout);
+        }
+        container.innerHTML = '';
         document.getElementById('geminiModal').classList.add('hidden');
     });
 });
@@ -56,7 +60,7 @@ function findLocationAndUpdateDirections(garden) {
             updateDirectionsButton(directionsUrl);
         },
         () => {
-            locationStatusEl.innerHTML = `<p class="text-center text-yellow-600 font-semibold bg-yellow-100/50 p-3 rounded-lg">⚠️ Could not get location. Directions will not have a starting point.</p>`;
+            locationStatusEl.innerHTML = `<p class="text-center text-yellow-600 font-semibold bg-white/50 p-3 rounded-lg">⚠️ Could not get location. Directions will not have a starting point.</p>`;
             const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${garden.latitude},${garden.longitude}&travelmode=walking`;
             updateDirectionsButton(directionsUrl);
         }
@@ -96,42 +100,151 @@ function initShareMap() {
     });
 }
 
-// --- GEMINI AI INSIGHT FUNCTIONS ---
+// --- ⭐️ START: Gemini Animation Logic with Summary Slide ⭐️ ---
 
-async function getGardenInsight(gardenData) {
-    const geminiModalContent = document.getElementById('geminiModalContent');
-    const geminiLoadingIndicator = document.getElementById('geminiLoadingIndicator');
+function playAnimation(animationScript) {
+    const container = document.getElementById('geminiAnimationContainer');
+    const loadingIndicator = document.getElementById('geminiLoadingIndicator');
+    
+    loadingIndicator.classList.add('hidden');
+    container.innerHTML = ''; 
+    container.classList.remove('hidden');
+
+    if (activeAnimationTimeout) {
+        clearTimeout(activeAnimationTimeout);
+    }
+
+    let sceneIndex = 0;
+    const iconsShown = []; // Array to collect icons
+
+    function showNextScene() {
+        if (sceneIndex < animationScript.length) {
+            const sceneData = animationScript[sceneIndex];
+            const sceneElement = document.createElement('div');
+            sceneElement.className = 'scene animated-background';
+
+            const iconMap = {
+                'slide': '/icons/slide-icon.jpg',
+                'swing': '/icons/swing-icon.jpg',
+                'carousel': '/icons/carousel-icon.jpeg',
+                'spring_horse': '/icons/spring-horse.png',
+                'kids_playing': '/icons/slide-icon.jpg', // Use a more generic icon
+                'dog_park': '/icons/dogs.jpg',
+                'basketball': '/icons/basketball-field.png',
+                'football': '/icons/football-field.jpg',
+                'gym': '/icons/public-gym-icon.png',
+                'ping_pong': '/icons/ping-pong.jpg',
+                'books': '/icons/public-books.jpg',
+                'water_tap': '/icons/water-tap-icon.png',
+                'park_entrance': '/icons/slide-icon.jpg'
+            };
+            const iconSrc = iconMap[sceneData.icon] || '/icons/slide-icon.jpg';
+
+            // Collect feature icons (don't add intro/outro icons)
+            if (sceneData.icon !== 'park_entrance' && sceneData.icon !== 'kids_playing') {
+                iconsShown.push(iconSrc);
+            }
+
+            sceneElement.innerHTML = `
+                <img src="${iconSrc}" alt="${sceneData.description}" class="scene-icon">
+                <p class="scene-description">${sceneData.description}</p>
+            `;
+            
+            container.innerHTML = '';
+            container.appendChild(sceneElement);
+
+            setTimeout(() => sceneElement.classList.add('active'), 50);
+
+            sceneIndex++;
+            activeAnimationTimeout = setTimeout(showNextScene, sceneData.duration);
+        } else {
+            // This is the new final slide
+            const finalElement = document.createElement('div');
+            finalElement.className = 'scene active animated-background';
+
+            // Create the HTML for all the collected icons
+            const iconsHTML = iconsShown.map(src => `<img src="${src}" class="w-10 h-10 object-contain">`).join('');
+            
+            finalElement.innerHTML = `
+                <p class="scene-description mb-4 font-bold">This park has it all!</p>
+                <div class="flex flex-wrap justify-center items-center gap-4">
+                    ${iconsHTML}
+                </div>
+            `;
+            container.innerHTML = '';
+            container.appendChild(finalElement);
+        }
+    }
+    showNextScene();
+}
+
+async function requestGardenAnimation(gardenData) {
+    const animationContainer = document.getElementById('geminiAnimationContainer');
+    const loadingIndicator = document.getElementById('geminiLoadingIndicator');
+    const modal = document.getElementById('geminiModal');
+
+    document.getElementById('geminiModalTitle').textContent = `✨ Imagining Your Visit In ${gardenData.gardenCity} ✨`;
+    
+    animationContainer.classList.add('hidden');
+    loadingIndicator.classList.remove('hidden');
+    modal.classList.remove('hidden');
+
     let features = [];
-    if (gardenData.hasWaterTap === 'true') features.push('water tap');
+    if (gardenData.hasWaterTap === 'true') features.push('water_tap');
     if (gardenData.hasSlide === 'true') features.push('slide');
-    if (gardenData.hasCarrousel === 'true') features.push('carrousel');
-    if (gardenData.hasSwings === 'true') features.push('swings');
-    if (gardenData.hasSpringHorse === 'true') features.push('spring horse');
-    if (gardenData.hasPublicBooksShelf === 'true') features.push('public books shelf');
-    if (gardenData.hasPingPongTable === 'true') features.push('ping pong table');
-    if (gardenData.hasPublicGym === 'true') features.push('public gym');
-    if (gardenData.hasBasketballField === 'true') features.push('basketball field');
-    if (gardenData.hasFootballField === 'true') features.push('football field');
-    if (gardenData.hasSpaceForDogs === 'true') features.push('space for dogs');
-    let featuresText = features.length > 0 ? `It has ${features.join(', ')}.` : 'It has no specific amenities listed.';
-    const prompt = `Generate a short (2-3 sentences) and engaging description for a public park in "${gardenData.gardenCity}". Emphasize its appeal for families based on its features: ${featuresText}.`;
-    document.getElementById('geminiModalTitle').textContent = `✨ Imagine Your Visit In ${gardenData.gardenCity} ✨`;
-    geminiModalContent.textContent = '';
-    geminiLoadingIndicator.classList.remove('hidden');
-    document.getElementById('geminiModal').classList.remove('hidden');
+    if (gardenData.hasCarrousel === 'true') features.push('carousel');
+    if (gardenData.hasSwings === 'true') features.push('swing');
+    if (gardenData.hasSpringHorse === 'true') features.push('spring_horse');
+    if (gardenData.hasPublicBooksShelf === 'true') features.push('books');
+    if (gardenData.hasPingPongTable === 'true') features.push('ping_pong');
+    if (gardenData.hasPublicGym === 'true') features.push('gym');
+    if (gardenData.hasBasketballField === 'true') features.push('basketball');
+    if (gardenData.hasFootballField === 'true') features.push('football');
+    if (gardenData.hasSpaceForDogs === 'true') features.push('dog_park');
+
+    let featuresText = features.length > 0 ? `The park has: ${features.join(', ').replace(/_/g, ' ')}.` : 'The park has no special features listed.';
+    const totalScenes = 2 + features.length; 
+
+    const prompt = `
+        You are an animation director creating a happy, family-friendly story about visiting a public garden.
+        The story is told by a friendly mascot, "Sunny the Squirrel".
+        Your output MUST be a valid JSON array of objects, with no text before or after it.
+
+        Each object is a scene and must have four properties:
+        1. "scene": The scene number.
+        2. "description": A short, engaging description (max 10 words) from Sunny the Squirrel's perspective.
+        3. "icon": A string representing the scene's main element. For the middle scenes, the icon name MUST be one of the feature names provided.
+        4. "duration": A number in milliseconds for the scene's duration (between 2000 and 3000).
+
+        Create a story with exactly ${totalScenes} scenes based on this park:
+        - Location: A park in the city of ${gardenData.gardenCity}.
+        - Features Available for icon use: ${features.join(', ')}.
+
+        The story MUST be structured like this:
+        1. The FIRST scene must be an entrance scene (icon: 'park_entrance').
+        2. Create one scene for EACH of the features listed: ${features.join(', ')}. Use the feature name as the icon name for its scene.
+        3. The LAST scene must be about kids playing (icon: 'kids_playing').
+    `;
+
     try {
         const response = await fetch('/api/gemini-insight', {
-            method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ prompt })
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt })
         });
-        if (!response.ok) throw new Error((await response.json()).message || 'Failed to get insight');
+        if (!response.ok) throw new Error((await response.json()).message || 'Failed to get animation script');
+
         const result = await response.json();
-        geminiModalContent.textContent = result.insight;
+        playAnimation(result.animationScript);
+
     } catch (error) {
-        geminiModalContent.textContent = `Failed to get insight. Error: ${error.message}`;
-    } finally {
-        geminiLoadingIndicator.classList.add('hidden');
+        loadingIndicator.classList.add('hidden');
+        animationContainer.classList.remove('hidden');
+        animationContainer.innerHTML = `<div class="scene active"><p class="scene-description text-red-500">Could not imagine the visit. Error: ${error.message}</p></div>`;
     }
 }
+
+// --- ⭐️ END: Gemini Animation Logic with Summary Slide ⭐️ ---
 
 // --- CARD RENDERING FUNCTIONS ---
 

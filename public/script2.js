@@ -1,6 +1,7 @@
 // --- Global State for Public View ---
 window.allGardens = [];
 window.activeFilter = 'all';
+let activeAnimationTimeout = null; 
 
 // --- Garden Loading & Rendering for Main Page ---
 window.loadGardens = async function(isInitialLoad, callback) {
@@ -29,7 +30,6 @@ window.loadGardens = async function(isInitialLoad, callback) {
             messageContainer.innerHTML = `<p class="text-center text-gray-700 font-semibold bg-white/50 p-3 rounded-lg">🖊️ Post your garden review to improve the app 🖊️</p>`;
         }
 
-        // After the gardens are rendered, execute the callback if it exists.
         if (callback && typeof callback === 'function') {
             callback();
         }
@@ -53,7 +53,7 @@ window.renderFilteredGardens = function() {
     if (filteredGardens.length === 0 && window.activeFilter !== 'all') {
         messageContainer.innerHTML = `<p class="text-center text-gray-700 font-semibold bg-white/50 p-3 rounded-lg">No gardens found with this feature.</p>`;
     } else if (filteredGardens.length > 0 && messageContainer.textContent === 'No gardens found with this feature.') {
-        messageContainer.innerHTML = ''; // Clear the "not found" message if we now have gardens
+        messageContainer.innerHTML = '';
     }
 
     window.gardenMarkers.forEach(marker => marker.setMap(null));
@@ -71,15 +71,13 @@ window.renderFilteredGardens = function() {
         });
 
         marker.gardenId = garden._id;
-
         const infoWindowTitle = `${garden.city || 'Unknown'} - ${garden.customName ? `${garden.customName}, ` : ''}${garden.address || 'Address not found'}`;
-
         const infoWindow = new google.maps.InfoWindow({
             content: `<div class="text-gray-800 cursor-pointer" style="max-width: 250px;" onclick="window.scrollToCard('${garden._id}')">
-                                  <h3 class="font-bold mb-0.5">${infoWindowTitle}</h3>
-                                  <p class="text-sm mb-1">Kids Now: ${garden.kidsCount}</p>
-                                  <p class="text-blue-600 text-xs font-semibold">Click to scroll to card</p>
-                              </div>`
+                          <h3 class="font-bold mb-0.5">${infoWindowTitle}</h3>
+                          <p class="text-sm mb-1">Kids Now: ${garden.kidsCount}</p>
+                          <p class="text-blue-600 text-xs font-semibold">Click to scroll to card</p>
+                      </div>`
         });
 
         marker.addListener('click', () => {
@@ -98,8 +96,7 @@ function createGardenCard(garden) {
     const el = document.createElement('div');
     el.id = `card-${garden._id}`;
     el.dataset.gardenId = garden._id;
-
-    el.className = 'bg-white p-4 rounded-lg shadow cursor-pointer hover:bg-gray-50 transition-colors garden-card';
+    el.className = 'bg-white p-4 rounded-lg shadow cursor-pointer garden-card';
 
     const waterTapGrayscale = garden.hasWaterTap ? '' : 'img-grayscale';
     const slideGrayscale = garden.hasSlide ? '' : 'img-grayscale';
@@ -197,7 +194,7 @@ function createGardenCard(garden) {
                 data-has-carrousel="${garden.hasCarrousel}"
                 data-has-swings="${garden.hasSwings}"
                 data-has-spring-horse="${garden.hasSpringHorse}"
-                data-has-public-books-shelf="${garden.hasPublicBooksShelf}"  
+                data-has-public-books-shelf="${garden.hasPublicBooksShelf}"
                 data-has-ping-pong-table="${garden.hasPingPongTable}"
                 data-has-public-gym="${garden.hasPublicGym}"
                 data-has-basketball-field="${garden.hasBasketballField}"
@@ -218,10 +215,8 @@ function attachPublicCardEventListeners() {
     document.querySelectorAll('.garden-card').forEach(card => {
         card.addEventListener('click', (event) => {
             if (event.target.closest('.kids-count-input, .update-kids-btn, .directions-btn, .gemini-insight-btn, .share-garden-btn')) return;
-
             const gardenId = card.dataset.gardenId;
             const marker = window.gardenMarkers.find(m => m.gardenId === gardenId);
-
             if (marker) {
                 document.getElementById('map').scrollIntoView({ behavior: 'smooth' });
                 window.map.panTo(marker.getPosition());
@@ -233,7 +228,7 @@ function attachPublicCardEventListeners() {
     document.querySelectorAll('.kids-count-input').forEach(input => {
         const initialValue = input.value;
         input.addEventListener('input', (e) => {
-            const updateBtn = e.target.parentElement.querySelector('.update-kids-btn');
+            const updateBtn = e.target.closest('.garden-card').querySelector('.update-kids-btn');
             updateBtn.classList.toggle('hidden', e.target.value === initialValue);
         });
     });
@@ -243,24 +238,13 @@ window.scrollToCard = function(gardenId) {
     const cardElement = document.getElementById(`card-${gardenId}`);
     if (cardElement) {
         cardElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        cardElement.style.transition = 'background-color 0.5s';
-        cardElement.style.backgroundColor = '#ffffffff'; // A light blue highlight color
-        setTimeout(() => {
-            cardElement.style.backgroundColor = '';
-        }, 2000);
     }
 }
 
-/**
- * Handles sharing a specific garden.
- * @param {string} gardenId - The ID of the garden to share.
- * @param {string} gardenName - The name or address of the garden.
- */
 window.shareGarden = async function(gardenId, gardenName) {
     const shareData = {
         title: 'Public Garden Locator',
         text: `Check out this garden: ${gardenName}`,
-        // UPDATED: This now points to the new share.html page
         url: `${window.location.origin}/share.html?id=${gardenId}`
     };
 
@@ -272,7 +256,7 @@ window.shareGarden = async function(gardenId, gardenName) {
                 alert('Share feature not supported. Link copied to clipboard!');
             }).catch(err => {
                 console.error('Could not copy link: ', err);
-                alert('Could not copy link automatically. Please copy this link manually:\n' + shareData.url);
+                alert('Could not copy link. Please copy this manually:\n' + shareData.url);
             });
         }
     } catch (err) {
@@ -280,31 +264,131 @@ window.shareGarden = async function(gardenId, gardenName) {
     }
 };
 
-// --- Gemini AI Insight Modal & Logic ---
-window.getGardenInsight = async function(gardenData) {
-    const geminiModalContent = document.getElementById('geminiModalContent');
-    const geminiLoadingIndicator = document.getElementById('geminiLoadingIndicator');
+// --- ⭐️ START: Gemini Animation Logic with Summary Slide ⭐️ ---
+
+function playAnimation(animationScript) {
+    const container = document.getElementById('geminiAnimationContainer');
+    const loadingIndicator = document.getElementById('geminiLoadingIndicator');
+    
+    loadingIndicator.classList.add('hidden');
+    container.innerHTML = ''; 
+    container.classList.remove('hidden');
+
+    if (activeAnimationTimeout) {
+        clearTimeout(activeAnimationTimeout);
+    }
+
+    let sceneIndex = 0;
+    const iconsShown = []; // MODIFIED: Array to collect icons
+
+    function showNextScene() {
+        if (sceneIndex < animationScript.length) {
+            const sceneData = animationScript[sceneIndex];
+            const sceneElement = document.createElement('div');
+            sceneElement.className = 'scene animated-background';
+
+            const iconMap = {
+                'slide': '/icons/slide-icon.jpg',
+                'swing': '/icons/swing-icon.jpg',
+                'carousel': '/icons/carousel-icon.jpeg',
+                'spring_horse': '/icons/spring-horse.png',
+                'kids_playing': '/icons/slide-icon.jpg', // MODIFIED: Use a more generic icon
+                'dog_park': '/icons/dogs.jpg',
+                'basketball': '/icons/basketball-field.png',
+                'football': '/icons/football-field.jpg',
+                'gym': '/icons/public-gym-icon.png',
+                'ping_pong': '/icons/ping-pong.jpg',
+                'books': '/icons/public-books.jpg',
+                'water_tap': '/icons/water-tap-icon.png',
+                'park_entrance': '/icons/slide-icon.jpg'
+            };
+            const iconSrc = iconMap[sceneData.icon] || '/icons/slide-icon.jpg';
+
+            // MODIFIED: Collect feature icons (don't add intro/outro icons)
+            if (sceneData.icon !== 'park_entrance' && sceneData.icon !== 'kids_playing') {
+                iconsShown.push(iconSrc);
+            }
+
+            sceneElement.innerHTML = `
+                <img src="${iconSrc}" alt="${sceneData.description}" class="scene-icon">
+                <p class="scene-description">${sceneData.description}</p>
+            `;
+            
+            container.innerHTML = '';
+            container.appendChild(sceneElement);
+
+            setTimeout(() => sceneElement.classList.add('active'), 50);
+
+            sceneIndex++;
+            activeAnimationTimeout = setTimeout(showNextScene, sceneData.duration);
+        } else {
+            // MODIFIED: This is the new final slide
+            const finalElement = document.createElement('div');
+            finalElement.className = 'scene active animated-background';
+
+            // Create the HTML for all the collected icons
+            const iconsHTML = iconsShown.map(src => `<img src="${src}" class="w-10 h-10 object-contain">`).join('');
+            
+            finalElement.innerHTML = `
+                <p class="scene-description mb-4 font-bold">This park has it all!</p>
+                <div class="flex flex-wrap justify-center items-center gap-4">
+                    ${iconsHTML}
+                </div>
+            `;
+            container.innerHTML = '';
+            container.appendChild(finalElement);
+        }
+    }
+    showNextScene();
+}
+
+async function requestGardenAnimation(gardenData) {
+    const animationContainer = document.getElementById('geminiAnimationContainer');
+    const loadingIndicator = document.getElementById('geminiLoadingIndicator');
+    const modal = document.getElementById('geminiModal');
+
+    document.getElementById('geminiModalTitle').textContent = `✨ Imagining Your Visit In ${gardenData.gardenCity} ✨`;
+    
+    animationContainer.classList.add('hidden');
+    loadingIndicator.classList.remove('hidden');
+    modal.classList.remove('hidden');
 
     let features = [];
-    if (gardenData.hasWaterTap === 'true') features.push('water tap');
+    if (gardenData.hasWaterTap === 'true') features.push('water_tap');
     if (gardenData.hasSlide === 'true') features.push('slide');
-    if (gardenData.hasCarrousel === 'true') features.push('carrousel');
-    if (gardenData.hasSwings === 'true') features.push('swings');
-    if (gardenData.hasSpringHorse === 'true') features.push('spring horse');
-    if (gardenData.hasPublicBooksShelf === 'true') features.push('public books shelf');
-    if (gardenData.hasPingPongTable === 'true') features.push('ping pong table');
-    if (gardenData.hasPublicGym === 'true') features.push('public gym');
-    if (gardenData.hasBasketballField === 'true') features.push('basketball field');
-    if (gardenData.hasFootballField === 'true') features.push('football field');
-    if (gardenData.hasSpaceForDogs === 'true') features.push('space for dogs');
+    if (gardenData.hasCarrousel === 'true') features.push('carousel');
+    if (gardenData.hasSwings === 'true') features.push('swing');
+    if (gardenData.hasSpringHorse === 'true') features.push('spring_horse');
+    if (gardenData.hasPublicBooksShelf === 'true') features.push('books');
+    if (gardenData.hasPingPongTable === 'true') features.push('ping_pong');
+    if (gardenData.hasPublicGym === 'true') features.push('gym');
+    if (gardenData.hasBasketballField === 'true') features.push('basketball');
+    if (gardenData.hasFootballField === 'true') features.push('football');
+    if (gardenData.hasSpaceForDogs === 'true') features.push('dog_park');
 
-    let featuresText = features.length > 0 ? `It has ${features.join(', ')}.` : 'It has no specific amenities listed.';
-    const prompt = `Generate a short (2-3 sentences) and engaging description for a public park in "${gardenData.gardenCity}". Emphasize its appeal for families based on its features: ${featuresText}.`;
+    let featuresText = features.length > 0 ? `The park has: ${features.join(', ').replace(/_/g, ' ')}.` : 'The park has no special features listed.';
+    const totalScenes = 2 + features.length; 
 
-    document.getElementById('geminiModalTitle').textContent = `✨ Imagine Your Visit In ${gardenData.gardenCity} ✨`;
-    geminiModalContent.textContent = '';
-    geminiLoadingIndicator.classList.remove('hidden');
-    document.getElementById('geminiModal').classList.remove('hidden');
+    const prompt = `
+        You are an animation director creating a happy, family-friendly story about visiting a public garden.
+        The story is told by a friendly mascot, "Sunny the Squirrel".
+        Your output MUST be a valid JSON array of objects, with no text before or after it.
+
+        Each object is a scene and must have four properties:
+        1. "scene": The scene number.
+        2. "description": A short, engaging description (max 10 words) from Sunny the Squirrel's perspective.
+        3. "icon": A string representing the scene's main element. For the middle scenes, the icon name MUST be one of the feature names provided.
+        4. "duration": A number in milliseconds for the scene's duration (between 2000 and 3000).
+
+        Create a story with exactly ${totalScenes} scenes based on this park:
+        - Location: A park in the city of ${gardenData.gardenCity}.
+        - Features Available for icon use: ${features.join(', ')}.
+
+        The story MUST be structured like this:
+        1. The FIRST scene must be an entrance scene (icon: 'park_entrance').
+        2. Create one scene for EACH of the features listed: ${features.join(', ')}. Use the feature name as the icon name for its scene.
+        3. The LAST scene must be about kids playing (icon: 'kids_playing').
+    `;
 
     try {
         const response = await fetch('/api/gemini-insight', {
@@ -312,19 +396,28 @@ window.getGardenInsight = async function(gardenData) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ prompt })
         });
-        if (!response.ok) throw new Error((await response.json()).message || 'Failed to get insight');
+        if (!response.ok) throw new Error((await response.json()).message || 'Failed to get animation script');
+
         const result = await response.json();
-        geminiModalContent.textContent = result.insight;
+        playAnimation(result.animationScript);
+
     } catch (error) {
-        geminiModalContent.textContent = `Failed to get insight. Error: ${error.message}`;
-    } finally {
-        geminiLoadingIndicator.classList.add('hidden');
+        loadingIndicator.classList.add('hidden');
+        animationContainer.classList.remove('hidden');
+        animationContainer.innerHTML = `<div class="scene active"><p class="scene-description text-red-500">Could not imagine the visit. Error: ${error.message}</p></div>`;
     }
-};
+}
 
 document.getElementById('closeGeminiModalBtn').addEventListener('click', () => {
+    const container = document.getElementById('geminiAnimationContainer');
+    if (activeAnimationTimeout) {
+        clearTimeout(activeAnimationTimeout);
+    }
+    container.innerHTML = '';
     document.getElementById('geminiModal').classList.add('hidden');
 });
+
+// --- ⭐️ END: Gemini Animation Logic with Summary Slide ⭐️ ---
 
 
 // --- Navigation, Filter Menu, and Statistics ---
@@ -468,7 +561,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         else if (e.target.classList.contains('gemini-insight-btn')) {
             const gardenData = e.target.dataset;
-            window.getGardenInsight(gardenData);
+            requestGardenAnimation(gardenData);
         }
         else if (e.target.classList.contains('share-garden-btn')) {
             const button = e.target;

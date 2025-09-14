@@ -1,5 +1,5 @@
 // server.js
-// Ensure your .env file has a variable named Maps_API_KEY and GEMINI_API_KEY
+// Ensure your .env file has variables named GOOGLE_MAPS_API_KEY and GEMINI_API_KEY
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -8,17 +8,17 @@ const path = require('path');
 const { Client } = require("@googlemaps/google-maps-services-js");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-const bcrypt = require('bcryptjs'); // NEW: Import bcrypt for password hashing
-const jwt = require('jsonwebtoken'); // NEW: Import jsonwebtoken for JWTs
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Secret for JWTs (store this securely in .env in a real app!)
-const JWT_SECRET = process.env.JWT_SECRET || 'supersecretkeyforpublicgardenapp2025'; // NEW: JWT Secret
+const JWT_SECRET = process.env.JWT_SECRET || 'supersecretkeyforpublicgardenapp2025';
 
 // Admin secret code (for registration)
-const ADMIN_SECRET_CODE = '202507'; // NEW: Admin secret code
+const ADMIN_SECRET_CODE = '202507';
 
 // --- Middleware ---
 app.use(cors());
@@ -28,16 +28,15 @@ app.use('/icons', express.static(path.join(__dirname, 'icons')));
 
 // --- MongoDB Connection ---
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("✅Successfully connected to MongoDB Atlas!✅"))
+  .then(() => console.log("✅ Successfully connected to MongoDB Atlas! ✅"))
   .catch(err => console.error("Error connecting to MongoDB:", err));
 
 // --- Mongoose Schemas ---
 
-// Existing Garden Schema
 const gardenSchema = new mongoose.Schema({
     latitude: { type: Number, required: true },
     longitude: { type: Number, required: true },
-    customName: { type: String, default: '' }, // ADDED: Custom name for the garden
+    customName: { type: String, default: '' },
     city: { type: String, default: 'Unknown' },
     address: { type: String, default: 'Address not found' },
     hasWaterTap: { type: Boolean, default: false },
@@ -57,17 +56,15 @@ const gardenSchema = new mongoose.Schema({
 
 const Garden = mongoose.model('Garden', gardenSchema);
 
-// NEW: Admin User Schema
 const adminSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    isAdmin: { type: Boolean, default: true } // All users in this schema are admins
+    isAdmin: { type: Boolean, default: true }
 });
 
 const Admin = mongoose.model('Admin', adminSchema);
 
-// NEW: Schema to log filter clicks for statistics
 const filterClickSchema = new mongoose.Schema({
     filterName: { type: String, required: true },
     createdAt: { type: Date, default: Date.now }
@@ -75,11 +72,10 @@ const filterClickSchema = new mongoose.Schema({
 
 const FilterClick = mongoose.model('FilterClick', filterClickSchema);
 
-
 // Initialize Gemini API
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-// --- Authentication Middleware (NEW) ---
+// --- Authentication Middleware ---
 function authenticateToken(req, res, next) {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1]; // Format: "Bearer TOKEN"
@@ -91,7 +87,7 @@ function authenticateToken(req, res, next) {
             console.error('JWT verification error:', err.message);
             return res.status(403).json({ message: 'Invalid or expired token' });
         }
-        req.user = user; // Attach user payload from token
+        req.user = user;
         next();
     });
 }
@@ -99,7 +95,6 @@ function authenticateToken(req, res, next) {
 // --- API Routes ---
 
 app.get('/api/config', (req, res) => {
-    // --- Log for API key request ---
     console.log(`[${new Date().toISOString()}] GET /api/config - Request for API key received.`);
     res.json({
         googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY
@@ -107,7 +102,6 @@ app.get('/api/config', (req, res) => {
 });
 
 app.get('/api/gardens', async (req, res) => {
-    // --- Log for fetching gardens ---
     console.log(`[${new Date().toISOString()}] GET /api/gardens - Fetching all gardens.`);
     try {
         const gardens = await Garden.find();
@@ -117,33 +111,21 @@ app.get('/api/gardens', async (req, res) => {
     }
 });
 
-// --- START: NEW ROUTE FOR SHARE PAGE ---
-// This route fetches a single garden by its ID, which is needed for the share.html page.
 app.get('/api/gardens/:id', async (req, res) => {
     try {
         const { id } = req.params;
         console.log(`[${new Date().toISOString()}] GET /api/gardens/${id} - Fetching single garden.`);
-        
-        // Use a mongoose method to find the document by its ID
         const garden = await Garden.findById(id);
-
-        // If no garden is found, return a 404 error
         if (!garden) {
             return res.status(404).json({ message: 'Garden not found' });
         }
-        
-        // If the garden is found, send it back as JSON
         res.json(garden);
-
     } catch (error) {
         console.error(`Error fetching garden ${req.params.id}:`, error);
         res.status(500).json({ message: 'Error fetching garden', error: error.message });
     }
 });
-// --- END: NEW ROUTE FOR SHARE PAGE ---
 
-
-// NEW: Admin Registration Route
 app.post('/api/auth/register', async (req, res) => {
     const { name, email, password, secretCode } = req.body;
     console.log(`[${new Date().toISOString()}] POST /api/auth/register - Attempting admin registration for: ${email}`);
@@ -151,15 +133,12 @@ app.post('/api/auth/register', async (req, res) => {
     if (secretCode !== ADMIN_SECRET_CODE) {
         return res.status(403).json({ message: 'Invalid secret code' });
     }
-
     try {
-        // Check if admin already exists
         const existingAdmin = await Admin.findOne({ email });
         if (existingAdmin) {
             return res.status(409).json({ message: 'Admin with this email already exists' });
         }
-
-        const hashedPassword = await bcrypt.hash(password, 10); // Hash password
+        const hashedPassword = await bcrypt.hash(password, 10);
         const newAdmin = new Admin({ name, email, password: hashedPassword });
         await newAdmin.save();
         res.status(201).json({ message: 'Admin registered successfully' });
@@ -169,23 +148,18 @@ app.post('/api/auth/register', async (req, res) => {
     }
 });
 
-// NEW: Admin Login Route
 app.post('/api/auth/login', async (req, res) => {
     const { email, password } = req.body;
     console.log(`[${new Date().toISOString()}] POST /api/auth/login - Attempting admin login for: ${email}`);
-
     try {
         const admin = await Admin.findOne({ email });
         if (!admin) {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
-
         const isMatch = await bcrypt.compare(password, admin.password);
         if (!isMatch) {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
-
-        // Generate JWT
         const token = jwt.sign({ id: admin._id, email: admin.email, isAdmin: true }, JWT_SECRET, { expiresIn: '1h' });
         res.json({ message: 'Logged in successfully', token, isAdmin: true });
     } catch (error) {
@@ -194,31 +168,24 @@ app.post('/api/auth/login', async (req, res) => {
     }
 });
 
-// NEW: Route to verify admin status (for frontend checks)
 app.get('/api/auth/check-admin', authenticateToken, (req, res) => {
-    // If authenticateToken succeeds, it means the token is valid and user is admin
     res.json({ isAdmin: req.user.isAdmin, email: req.user.email });
 });
 
-// NEW: Public PUT route to update only kidsCount
 app.put('/api/gardens/:id/kidscount', async (req, res) => {
     const { id } = req.params;
     const { kidsCount } = req.body;
 
-    // Basic validation for kidsCount
     if (typeof kidsCount === 'undefined' || kidsCount < 0) {
         return res.status(400).json({ message: 'Invalid kidsCount value provided. Must be a non-negative number.' });
     }
-
-    console.log(`[${new Date().toISOString()}] PUT /api/gardens/${id}/kidscount - Attempting to update kidsCount to: ${kidsCount}`);
-
+    console.log(`[${new Date().toISOString()}] PUT /api/gardens/${id}/kidscount - Updating kidsCount to: ${kidsCount}`);
     try {
         const updatedGarden = await Garden.findByIdAndUpdate(
             id,
             { $set: { kidsCount: kidsCount, kidsCountLastUpdated: new Date() } },
-            { new: true, runValidators: true } // Return the updated document and run schema validators
+            { new: true, runValidators: true }
         );
-
         if (!updatedGarden) {
             return res.status(404).json({ message: 'Garden not found' });
         }
@@ -229,26 +196,12 @@ app.put('/api/gardens/:id/kidscount', async (req, res) => {
     }
 });
 
-// MODIFIED: POST route to add a garden (AUTHENTICATION REMOVED)
-app.post('/api/gardens', async (req, res) => { // Removed authenticateToken middleware here
+app.post('/api/gardens', async (req, res) => {
     console.log(`[${new Date().toISOString()}] POST /api/gardens - Attempting to add new garden.`);
-
     const {
-        latitude,
-        longitude,
-        customName, // ADDED: Get customName from request
-        hasWaterTap,
-        hasSlide,
-        hasCarrousel,
-        hasSwings,
-        hasSpringHorse,
-        hasPublicBooksShelf,
-        hasPingPongTable,
-        hasPublicGym,
-        hasBasketballField,
-        hasFootballField,
-        hasSpaceForDogs,
-        kidsCount
+        latitude, longitude, customName, hasWaterTap, hasSlide, hasCarrousel,
+        hasSwings, hasSpringHorse, hasPublicBooksShelf, hasPingPongTable,
+        hasPublicGym, hasBasketballField, hasFootballField, hasSpaceForDogs, kidsCount
     } = req.body;
 
     const mapsClient = new Client({});
@@ -258,11 +211,10 @@ app.post('/api/gardens', async (req, res) => { // Removed authenticateToken midd
     try {
         const geoResponse = await mapsClient.reverseGeocode({
             params: {
-                latlng: { latitude: latitude, longitude: longitude },
+                latlng: { latitude, longitude },
                 key: process.env.GOOGLE_MAPS_API_KEY,
             },
         });
-
         if (geoResponse.data.results.length > 0) {
             fullAddress = geoResponse.data.results[0].formatted_address;
             for (const component of geoResponse.data.results[0].address_components) {
@@ -277,74 +229,32 @@ app.post('/api/gardens', async (req, res) => { // Removed authenticateToken midd
     }
 
     const newGardenData = {
-        latitude,
-        longitude,
-        customName, // ADDED: Include customName in the new garden data
-        city: cityName,
-        address: fullAddress,
-        hasWaterTap,
-        hasSlide,
-        hasCarrousel,
-        hasSwings,
-        hasSpringHorse,
-        hasPublicBooksShelf,
-        hasPingPongTable,
-        hasPublicGym,
-        hasBasketballField,
-        hasFootballField,
-        hasSpaceForDogs,
-        kidsCount,
-        kidsCountLastUpdated: new Date()
+        latitude, longitude, customName, city: cityName, address: fullAddress,
+        hasWaterTap, hasSlide, hasCarrousel, hasSwings, hasSpringHorse,
+        hasPublicBooksShelf, hasPingPongTable, hasPublicGym, hasBasketballField,
+        hasFootballField, hasSpaceForDogs, kidsCount, kidsCountLastUpdated: new Date()
     };
 
     try {
         const newGarden = new Garden(newGardenData);
         await newGarden.save();
-        console.log(`[${new Date().toISOString()}] Successfully added garden: ${newGarden._id} in ${cityName}`); // Removed admin email log
+        console.log(`[${new Date().toISOString()}] Successfully added garden: ${newGarden._id} in ${cityName}`);
         res.status(201).json(newGarden);
     } catch (error) {
         res.status(500).json({ message: 'Error adding garden', error });
     }
 });
 
-// PUT route to update existing garden (STILL PROTECTED by authenticateToken)
-app.put('/api/gardens/:id', authenticateToken, async (req, res) => { // KEPT: authenticateToken
+app.put('/api/gardens/:id', authenticateToken, async (req, res) => {
     const { id } = req.params;
-    // Allow updating all relevant garden properties from the request body
-    const updateFields = {
-        hasWaterTap: req.body.hasWaterTap,
-        hasSlide: req.body.hasSlide,
-        hasCarrousel: req.body.hasCarrousel,
-        hasSwings: req.body.hasSwings,
-        hasSpringHorse: req.body.hasSpringHorse,
-        hasPublicBooksShelf: req.body.hasPublicBooksShelf,
-        hasPingPongTable: req.body.hasPingPongTable,
-        hasPublicGym: req.body.hasPublicGym,
-        hasBasketballField: req.body.hasBasketballField,
-        hasFootballField: req.body.hasFootballField,
-        hasSpaceForDogs: req.body.hasSpaceForDogs,
-        kidsCount: req.body.kidsCount,
-        kidsCountLastUpdated: new Date() // Always update timestamp on modification
-    };
+    const updateFields = { ...req.body, kidsCountLastUpdated: new Date() };
 
-    // Filter out undefined values to only update what's provided in the request
+    // Filter out undefined values to only update what's provided
     Object.keys(updateFields).forEach(key => updateFields[key] === undefined && delete updateFields[key]);
-
-    // ADDED: Handle optional update for customName
-    if (typeof req.body.customName !== 'undefined') {
-        updateFields.customName = req.body.customName;
-    }
-
-    // Handle optional updates for city and address if provided (e.g., from an edit form)
-    if (req.body.city) updateFields.city = req.body.city;
-    if (req.body.address) updateFields.address = req.body.address;
-    if (req.body.latitude) updateFields.latitude = req.body.latitude; // Allow updating lat/lng
-    if (req.body.longitude) updateFields.longitude = req.body.longitude; // Allow updating lat/lng
-
+    
     console.log(`[${new Date().toISOString()}] PUT /api/gardens/${id} - Updating garden by admin: ${req.user.email}`);
-
     try {
-        const updatedGarden = await Garden.findByIdAndUpdate( id, { $set: updateFields }, { new: true } );
+        const updatedGarden = await Garden.findByIdAndUpdate(id, { $set: updateFields }, { new: true });
         if (!updatedGarden) {
             return res.status(404).json({ message: 'Garden not found' });
         }
@@ -355,11 +265,9 @@ app.put('/api/gardens/:id', authenticateToken, async (req, res) => { // KEPT: au
     }
 });
 
-// NEW: DELETE route for gardens (STILL PROTECTED)
-app.delete('/api/gardens/:id', authenticateToken, async (req, res) => { // KEPT: Protected route
+app.delete('/api/gardens/:id', authenticateToken, async (req, res) => {
     const { id } = req.params;
-    console.log(`[${new Date().toISOString()}] DELETE /api/gardens/${id} - Attempting to delete garden by admin: ${req.user.email}`);
-
+    console.log(`[${new Date().toISOString()}] DELETE /api/gardens/${id} - Deleting garden by admin: ${req.user.email}`);
     try {
         const deletedGarden = await Garden.findByIdAndDelete(id);
         if (!deletedGarden) {
@@ -372,7 +280,8 @@ app.delete('/api/gardens/:id', authenticateToken, async (req, res) => { // KEPT:
     }
 });
 
-// New Gemini API proxy endpoint (no changes needed here for admin)
+// --- ⭐️ START: MODIFIED GEMINI API ENDPOINT ⭐️ ---
+// This route now expects a prompt for an animation script and returns clean JSON.
 app.post('/api/gemini-insight', async (req, res) => {
     const { prompt } = req.body;
 
@@ -380,26 +289,36 @@ app.post('/api/gemini-insight', async (req, res) => {
         return res.status(400).json({ message: 'Prompt is required.' });
     }
 
-    console.log(`[${new Date().toISOString()}] POST /api/gemini-insight - Received prompt for Gemini API.`);
+    console.log(`[${new Date().toISOString()}] POST /api/gemini-insight - Received prompt for Gemini animation.`);
 
     try {
-        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+        // Using a more recent model suitable for JSON output
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
         const result = await model.generateContent(prompt);
         const response = await result.response;
 
         let text = response.text();
 
-        text = text.replace(/\[.*?\]/g, '').trim();
+        // Clean the response to ensure it's valid JSON
+        // Gemini might wrap the JSON in ```json ... ``` or just ```...```
+        const jsonMatch = text.match(/```(json\s*)?([\s\S]*?)\s*```/);
+        if (jsonMatch && jsonMatch[2]) {
+            text = jsonMatch[2];
+        }
 
-        console.log(`[${new Date().toISOString()}] Gemini API response received.`);
-        res.json({ insight: text });
+        // Attempt to parse to ensure it's valid before sending
+        const animationScript = JSON.parse(text);
+
+        console.log(`[${new Date().toISOString()}] Gemini API animation script generated successfully.`);
+        res.json({ animationScript }); // Send the parsed script to the client
+
     } catch (error) {
-        console.error(`[${new Date().toISOString()}] Error calling Gemini API:`, error);
-        res.status(500).json({ message: 'Error generating insight from Gemini API', error: error.message });
+        console.error(`[${new Date().toISOString()}] Error calling Gemini API or parsing JSON:`, error);
+        res.status(500).json({ message: 'Error generating animation script from Gemini API', error: error.message });
     }
 });
+// --- ⭐️ END: MODIFIED GEMINI API ENDPOINT ⭐️ ---
 
-// NEW: Endpoint to log a filter click
 app.post('/api/stats/filter-click', async (req, res) => {
     const { filterName } = req.body;
     if (!filterName) {
@@ -415,7 +334,6 @@ app.post('/api/stats/filter-click', async (req, res) => {
     }
 });
 
-// NEW: Endpoint to get filter click statistics
 app.get('/api/stats/filter-clicks', async (req, res) => {
     console.log(`[${new Date().toISOString()}] GET /api/stats/filter-clicks - Fetching stats.`);
     try {
@@ -454,10 +372,7 @@ app.get('/api/stats/filter-clicks', async (req, res) => {
     }
 });
 
-
 // --- Start the Server ---
 app.listen(PORT, () => {
-    console.log(`✅Server is running on http://localhost:${PORT}✅`);
+    console.log(`✅ Server is running on http://localhost:${PORT} ✅`);
 });
-
-// --- Start the Server -
