@@ -1,7 +1,7 @@
 // --- Global State for Public View ---
 window.allGardens = [];
 window.activeFilter = 'all';
-let activeAnimationTimeout = null; 
+let activeAnimationTimeout = null;
 
 // --- Garden Loading & Rendering for Main Page ---
 window.loadGardens = async function(isInitialLoad, callback) {
@@ -264,14 +264,14 @@ window.shareGarden = async function(gardenId, gardenName) {
     }
 };
 
-// --- ⭐️ START: Gemini Animation Logic with Summary Slide ⭐️ ---
+// --- ✨ START: Gemini Animation Logic with Softer Transitions ✨ ---
 
 function playAnimation(animationScript) {
     const container = document.getElementById('geminiAnimationContainer');
     const loadingIndicator = document.getElementById('geminiLoadingIndicator');
-    
+
     loadingIndicator.classList.add('hidden');
-    container.innerHTML = ''; 
+    container.innerHTML = ''; // Clear any previous content
     container.classList.remove('hidden');
 
     if (activeAnimationTimeout) {
@@ -279,65 +279,72 @@ function playAnimation(animationScript) {
     }
 
     let sceneIndex = 0;
-    const iconsShown = []; // MODIFIED: Array to collect icons
+    const iconsShown = [];
 
     function showNextScene() {
-        if (sceneIndex < animationScript.length) {
-            const sceneData = animationScript[sceneIndex];
-            const sceneElement = document.createElement('div');
-            sceneElement.className = 'scene animated-background';
+        const oldScene = container.querySelector('.scene.active');
 
-            const iconMap = {
-                'slide': '/icons/slide-icon.jpg',
-                'swing': '/icons/swing-icon.jpg',
-                'carousel': '/icons/carousel-icon.jpeg',
-                'spring_horse': '/icons/spring-horse.png',
-                'kids_playing': '/icons/kids-playing.jpg', // MODIFIED: Use a more generic icon
-                'dog_park': '/icons/dogs.jpg',
-                'basketball': '/icons/basketball-field.png',
-                'football': '/icons/football-field.jpg',
-                'gym': '/icons/public-gym-icon.png',
-                'ping_pong': '/icons/ping-pong.jpg',
-                'books': '/icons/public-books.jpg',
-                'water_tap': '/icons/water-tap-icon.png',
-                'park_entrance': '/icons/park-entrence.jpg'
-            };
-            const iconSrc = iconMap[sceneData.icon] || '/icons/slide-icon.jpg';
-
-            // MODIFIED: Collect feature icons (don't add intro/outro icons)
-            if (sceneData.icon !== 'park_entrance' && sceneData.icon !== 'kids_playing') {
-                iconsShown.push(iconSrc);
-            }
-
-            sceneElement.innerHTML = `
-                <img src="${iconSrc}" alt="${sceneData.description}" class="scene-icon">
-                <p class="scene-description">${sceneData.description}</p>
-            `;
-            
-            container.innerHTML = '';
-            container.appendChild(sceneElement);
-
-            setTimeout(() => sceneElement.classList.add('active'), 50);
-
-            sceneIndex++;
-            activeAnimationTimeout = setTimeout(showNextScene, sceneData.duration);
-        } else {
-            // MODIFIED: This is the new final slide
+        // --- Logic for the final summary slide ---
+        if (sceneIndex >= animationScript.length) {
             const finalElement = document.createElement('div');
-            finalElement.className = 'scene active animated-background';
-
-            // Create the HTML for all the collected icons
+            finalElement.className = 'scene animated-background';
             const iconsHTML = iconsShown.map(src => `<img src="${src}" class="w-10 h-10 object-contain">`).join('');
-            
             finalElement.innerHTML = `
                 <p class="scene-description mb-4 font-bold">This park has it all!</p>
                 <div class="flex flex-wrap justify-center items-center gap-4">
                     ${iconsHTML}
-                </div>
-            `;
-            container.innerHTML = '';
+                </div>`;
             container.appendChild(finalElement);
+            
+            setTimeout(() => {
+                if (oldScene) oldScene.classList.remove('active');
+                finalElement.classList.add('active');
+            }, 50);
+
+            if (oldScene) {
+                setTimeout(() => oldScene.remove(), 550); // Clean up after transition
+            }
+            return; // End of animation
         }
+
+        // --- Logic for regular feature slides ---
+        const sceneData = animationScript[sceneIndex];
+        const sceneElement = document.createElement('div');
+        sceneElement.className = 'scene animated-background';
+
+        const iconMap = {
+            'slide': '/icons/slide-icon.jpg', 'swing': '/icons/swing-icon.jpg',
+            'carousel': '/icons/carousel-icon.jpeg', 'spring_horse': '/icons/spring-horse.png',
+            'kids_playing': '/icons/kids-playing.jpg', 'dog_park': '/icons/dogs.jpg',
+            'basketball': '/icons/basketball-field.png', 'football': '/icons/football-field.jpg',
+            'gym': '/icons/public-gym-icon.png', 'ping_pong': '/icons/ping-pong.jpg',
+            'books': '/icons/public-books.jpg', 'water_tap': '/icons/water-tap-icon.png',
+            'park_entrance': '/icons/park-entrence.jpg'
+        };
+        const iconSrc = iconMap[sceneData.icon] || '/icons/slide-icon.jpg';
+
+        if (sceneData.icon !== 'park_entrance' && sceneData.icon !== 'kids_playing') {
+            iconsShown.push(iconSrc);
+        }
+
+        sceneElement.innerHTML = `
+            <img src="${iconSrc}" alt="${sceneData.description}" class="scene-icon">
+            <p class="scene-description">${sceneData.description}</p>`;
+        
+        container.appendChild(sceneElement);
+
+        // Cross-fade logic
+        setTimeout(() => {
+            if (oldScene) oldScene.classList.remove('active'); // Fade out old
+            sceneElement.classList.add('active'); // Fade in new
+        }, 50);
+
+        if (oldScene) {
+            setTimeout(() => oldScene.remove(), 550); // Remove old scene after fade
+        }
+
+        sceneIndex++;
+        activeAnimationTimeout = setTimeout(showNextScene, sceneData.duration);
     }
     showNextScene();
 }
@@ -348,7 +355,7 @@ async function requestGardenAnimation(gardenData) {
     const modal = document.getElementById('geminiModal');
 
     document.getElementById('geminiModalTitle').textContent = `✨ Imagining Your Visit In ${gardenData.gardenCity} ✨`;
-    
+
     animationContainer.classList.add('hidden');
     loadingIndicator.classList.remove('hidden');
     modal.classList.remove('hidden');
@@ -367,7 +374,7 @@ async function requestGardenAnimation(gardenData) {
     if (gardenData.hasSpaceForDogs === 'true') features.push('dog_park');
 
     let featuresText = features.length > 0 ? `The park has: ${features.join(', ').replace(/_/g, ' ')}.` : 'The park has no special features listed.';
-    const totalScenes = 2 + features.length; 
+    const totalScenes = 2 + features.length;
 
     const prompt = `
         You are an animation director creating a happy, family-friendly story about visiting a public garden.
@@ -417,7 +424,7 @@ document.getElementById('closeGeminiModalBtn').addEventListener('click', () => {
     document.getElementById('geminiModal').classList.add('hidden');
 });
 
-// --- ⭐️ END: Gemini Animation Logic with Summary Slide ⭐️ ---
+// --- ✨ END: Gemini Animation Logic ✨ ---
 
 
 // --- Navigation, Filter Menu, and Statistics ---
